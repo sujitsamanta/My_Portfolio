@@ -153,3 +153,32 @@
 //    a.click();
 //    document.body.removeChild(a);
 //  }
+
+
+
+ // Tab switching functionality
+ const workTab = document.getElementById('workTab');
+ const educationTab = document.getElementById('educationTab');
+ const workSection = document.getElementById('workSection');
+ const educationSection = document.getElementById('educationSection');
+
+ workTab.addEventListener('click', () => {
+     workTab.classList.remove('tab-inactive');
+     workTab.classList.add('tab-active');
+     educationTab.classList.remove('tab-active');
+     educationTab.classList.add('tab-inactive');
+     
+     workSection.classList.remove('hidden');
+     educationSection.classList.add('hidden');
+ });
+
+ educationTab.addEventListener('click', () => {
+     educationTab.classList.remove('tab-inactive');
+     educationTab.classList.add('tab-active');
+     workTab.classList.remove('tab-active');
+     workTab.classList.add('tab-inactive');
+     
+     educationSection.classList.remove('hidden');
+     workSection.classList.add('hidden');
+ });
+
