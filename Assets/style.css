@@ -358,3 +358,21 @@ body.menu-open {
 .company-logo {
   background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
 }
+
+
+/* floating-element-icon  */
+.floating-element-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
