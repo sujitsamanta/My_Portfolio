@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Software Engineer</title>
+  <title>Sujit Samanta</title>
+  <!-- fab icon -->
+  <link rel="icon" type="image/png" href="./Assets/Documents/fab.png">
+  <!-- tailwindcss -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- css -->
   <link rel="stylesheet" href="./Assets/style.css" />
   <!-- AOS animaction -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- AOS animaction -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
+  <!-- font-awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<!-- tailwind extend -->
   <script>
     tailwind.config = {
       theme: {
@@ -28,10 +31,10 @@
       },
     };
   </script>
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  
 </head>
-<bod class="min-h-screen text-white overflow-x-hidden">
+<body class="min-h-screen text-white overflow-x-hidden">
+
   <!-- Navigation -->
   <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-20 backdrop-blur-md transition-all duration-300" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -369,8 +372,6 @@
       </div>
     </div>
   </section>
-
-
 
   <!-- Work And Education -->
   <div class="container mx-auto px-4 py-16 max-w-6xl">
@@ -829,7 +830,6 @@
     </div>
   </section>
 
-
   <!-- Contact Section -->
   <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
@@ -912,17 +912,25 @@
 
         <!-- Contact Form -->
         <div data-aos="zoom-in-up" class="contact-form rounded-2xl p-8">
-          <form class="space-y-6">
+          <form class="space-y-6" action="https://api.web3forms.com/submit" method="POST" id="form">
+
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="07ae5c9a-5b4a-4d19-b78c-4a916a197f5d">
+
+                 <!-- result -->
+                 <div id="result" class="block text-white text-lg mb-2 text-center rounded-md border-2 border-solid border-purple-500 ">
+                 </div>
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-white font-medium mb-2">First Name</label>
-                <input type="text"
+                <input name="firstname" type="text"
                   class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
                   placeholder="First Name" />
               </div>
               <div>
                 <label class="block text-white font-medium mb-2">Last Name</label>
-                <input type="text"
+                <input name="lastname" type="text"
                   class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
                   placeholder="Last Name" />
               </div>
@@ -930,16 +938,19 @@
 
             <div>
               <label class="block text-white font-medium mb-2">Email ID</label>
-              <input type="email"
+              <input name="emailid" type="email"
                 class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
                 placeholder="Email id" />
             </div>
             <div>
               <label class="block text-white font-medium mb-2">Message</label>
-              <textarea rows="5"
+              <textarea name="message" rows="5"
                 class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none resize-none"
                 placeholder="Tell me about your project..."></textarea>
             </div>
+
+                <!-- checkbox -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
             <button type="submit"
               class="w-full bg-gradient-to-r from-purple-600 to-purple-800 px-8 py-4 rounded-lg text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect">
@@ -950,6 +961,7 @@
               </p>
               
             </button>
+
           </form>
         </div>
       </div>
@@ -1029,7 +1041,6 @@
   <h6 style="text-align: center">Made by -❤️- Sujit Samanta</h6>
 
   <!-- AOS animaction  -->
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -1039,9 +1050,8 @@
   </script>
 
   <script src="./Assets/script.js"></script>
-
-  <!-- char boot -->
   <script>
+//  char boot 
     (function () {
       if (!window.chatbase || window.chatbase("getState") !== "initialized") {
         window.chatbase = (...arguments) => {
