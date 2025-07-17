@@ -6,7 +6,7 @@ About section:
 ![image alt](https://github.com/sujitsamanta/My_Portfolio/blob/main/Assets/Documents/brave_screenshot_sujitsamanta.github.io.png?raw=true)
 
 Chat boot:
-![image alt]()
+![image alt](https://github.com/sujitsamanta/My_Portfolio/blob/main/Assets/Documents/brave_screenshot_sujitsamanta.github.io%20(3).png?raw=true)
 
 Project section:
 ![image alt](https://github.com/sujitsamanta/My_Portfolio/blob/main/Assets/Documents/brave_screenshot_sujitsamanta.github.io%20(2).png?raw=true)
