@@ -88,7 +88,7 @@
  });
 
  // Typing animation effect
- const words = ["cover", "design", "experience", "interface"];
+ const words = ["Welcome to my page", "Laravel developer", "Full-Stack Web developer", "Ui/Ux designer"];
  let currentWordIndex = 0;
  let currentCharIndex = 0;
  let isDeleting = false;

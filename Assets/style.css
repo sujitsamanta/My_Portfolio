@@ -8,6 +8,14 @@ body {
       #16213e 50%,
       #0f3460 100%);
 }
+.leading-tight{
+  /* font-weight: 700; */
+}
+.leading-relaxed_under_text {
+  color: rgb(155, 75, 230);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 
 .glow-effect {
   box-shadow: 0 0 30px rgba(139, 90, 159, 0.3);
@@ -61,6 +69,7 @@ body {
 .typing-animation {
   border-right: 2px solid #8b5a9f;
   animation: blink 1s infinite;
+  /* font-size: 3rem; */
 }
 
 @keyframes blink {
