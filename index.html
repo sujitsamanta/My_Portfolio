@@ -15,7 +15,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <!-- font-awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-<!-- tailwind extend -->
+  <!-- tailwind extend -->
   <script>
     tailwind.config = {
       theme: {
@@ -31,1060 +31,1197 @@
       },
     };
   </script>
-  
 </head>
 <body class="min-h-screen text-white overflow-x-hidden">
-
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-20 backdrop-blur-md transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <!-- Logo -->
-        <div class="text-3xl font-bold z-10">
-          <span class="gradient-text">Portfolio</span>
+  <!-- ISOLATED LOADER SECTION -->
+  <div id="sujit_main_loader_container">
+    <div class="text-center">
+      <!-- Main Loader Container -->
+      <div class="relative">
+        <!-- Floating Code Elements -->
+        <div class="absolute -top-20 -left-20 sujit_floating_loader_element" style="animation-delay: 0s;">
+          <div class="sujit_code_block_style rounded-lg p-3 sujit_code_pulse_effect">
+            <span class="sujit_floating_code_purple text-sm font-mono">&lt;/&gt;</span>
+          </div>
         </div>
 
-        <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex space-x-8">
-          <a href="#home" class="text-xl font-semibold nav-link text-white hover:text-purple-300">Home</a>
-          <a href="#about" class="text-xl font-semibold nav-link text-white hover:text-purple-300">About</a>
-          <a href="#projects" class="text-xl font-semibold nav-link text-white hover:text-purple-300">Projects</a>
-          <a href="#contact" class="text-xl font-semibold nav-link text-white hover:text-purple-300">Contact</a>
+        <div class="absolute -top-16 -right-24 sujit_floating_loader_element" style="animation-delay: 1s;">
+          <div class="sujit_code_block_style rounded-lg p-3 sujit_code_pulse_effect" style="animation-delay: 0.5s;">
+            <span class="sujit_floating_code_pink text-sm font-mono">{}</span>
+          </div>
         </div>
 
-        <!-- CTA Button - Desktop -->
-        <div class="hidden md:block">
-          <a href="#contact"
-            class="text-lg bg-gradient-to-r from-purple-600 to-purple-800 px-6 py-2 rounded-full text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect">
-            Get in Touch
-          </a>
+        <div class="absolute -bottom-20 left-16 sujit_floating_loader_element" style="animation-delay: 2s;">
+          <div class="sujit_code_block_style rounded-lg p-3 sujit_code_pulse_effect" style="animation-delay: 1s;">
+            <span class="sujit_floating_code_violet text-sm font-mono">[]</span>
+          </div>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden hamburger" id="mobile-menu-btn" aria-label="Toggle mobile menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="md:hidden mobile-menu" id="mobile-menu">
-      <div class="mobile-menu-content">
-        <a href="#home" class="mobile-nav-link">Home</a>
-        <a href="#about" class="mobile-nav-link">About</a>
-        <a href="#projects" class="mobile-nav-link">Projects</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
-        <div class="mt-8 w-full max-w-xs">
-          <a href="#contact"
-            class="block w-full bg-gradient-to-r from-purple-600 to-purple-800 px-6 py-3 rounded-full text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 text-center glow-effect">
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero-section min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-8">
-    <div class="max-w-7xl mx-auto w-full">
-      <div class="hero-grid grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
-        <!-- Left Content -->
-        <div data-aos="zoom-in-right" class="hero-content text-center lg:text-left order-2 lg:order-1">
-          <div class="mb-8 lg:mb-12">
-            <p class="text-text-gray mb-3 text-sm sm:text-base">
-              Hello! I Am
-              <span class="text-purple-400 font-medium font-bold">Sujit Samanta</span>
-            </p>
-
-            <div class="mb-8">
-              <p class="text-text-gray mb-3 text-sm sm:text-base">
-                A Coder
-              </p>
-              <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 leading-tight">
-                Hi, I'm Sujit
-              </h1>
-              <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-                <!-- by its -->
-                <span class="gradient-text typing-animation">cover</span>...
-              </h1>
-              <p class="text-text-gray text-sm sm:text-base mt-4 max-w-md mx-auto lg:mx-0 leading-relaxed">
-                Crafting immersive digital experience with <span class="leading-relaxed_under_text">Laravel, My Sql, Tailwind.</span>
-              </p>
+        <!-- Central Loading Animation -->
+        <div class="sujit_slide_up_animation">
+          <!-- Rotating Gear/Circle -->
+          <div class="relative mb-8">
+            <div class="w-20 h-20 mx-auto border-4 sujit_gear_rotate_element"
+              style="border-color: #a855f7; border-top-color: transparent; border-radius: 50%;"></div>
+            <div class="absolute inset-0 w-12 h-12 mx-auto my-auto rounded-full flex items-center justify-center"
+              style="background-color: #a855f7;">
+              <span style="color: #ffffff; font-weight: bold; font-size: 1.25rem;">S</span>
             </div>
           </div>
 
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
-            <a href="#projects"
-              class="bg-gradient-to-r from-purple-600 to-purple-800 px-8 py-3 rounded-full text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect text-center">
-              View My Work
-            </a>
-            <a class="border border-purple-400 px-8 py-3 rounded-full text-purple-300 font-medium hover:bg-purple-600 hover:text-white transition-all duration-300 text-center"
-              href="./Assets/Documents/CV.pdf" download>
-              Download CV
-            </a>
-          </div>
+          <!-- Typing Text -->
+          <div class="mb-8">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 sujit_slide_up_animation"
+              style="animation-delay: 0.2s; color: #ffffff !important;">
+              Hi, I'm <span class="sujit_purple_text">Sujit</span>
+            </h1>
 
-          <!-- Social Links -->
-          <div class="flex justify-center lg:justify-start space-x-4">
-            <a href="https://github.com/sujitsamanta"
-              class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
-              <i class="fab fa-github text-white"></i>
-            </a>
-            <a style="animation-delay: -1s" style="animation-delay: -1s" href="https://www.linkedin.com/in/sujit-samanta510/"
-              class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
-              <i class="fab fa-linkedin text-white"></i>
-            </a>
-            <a style="animation-delay: -2s" href="https://www.facebook.com/sujit.samanta.122634"
-              class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
-              <i class="fab fa-facebook-f text-white"></i>
-            </a>
-            <a style="animation-delay: -3s" href="https://www.instagram.com/sujitsamanta38/"
-              class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
-              <i class="fab fa-instagram text-white"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Content - Character/Visual -->
-        <div data-aos="zoom-in-left" class="hero-visual flex justify-center order-1 lg:order-2">
-          <div class="relative">
-            <!-- Pulse rings -->
-            <div class="absolute inset-0 rounded-full border-2 border-purple-400 opacity-20 pulse-ring"></div>
-            <div class="absolute inset-0 rounded-full border-2 border-purple-300 opacity-10 pulse-ring"
-              style="animation-delay: -1s"></div>
-
-            <!-- Main circle -->
-            <div
-              class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-purple-600 to-purple-800 glow-effect flex items-center justify-center relative overflow-hidden">
-              <!-- Character Illustration -->
-              <div class="text-6xl sm:text-7xl lg:text-8xl floating-element">
-                <img
-                  class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-purple-300 rounded-full flex items-center justify-center"
-                  src="Assets/Documents/1752808374692-01.jpeg.jpg" alt="" loading="lazy" />
-              </div>
-
-              <!-- Floating elements -->
-              <div class="absolute top-10 right-20 w-5 h-5 bg-yellow-400 rounded-full floating-element"
-                style="animation-delay: -2s"></div>
-              <div class="absolute bottom-12 left-12 w-5 h-5 bg-pink-400 rounded-full floating-element"
-                style="animation-delay: -3s"></div>
-              <div class="absolute top-10 left-20 w-7 h-7 bg-blue-400 rounded-full floating-element"
-                style="animation-delay: -4s"></div>
+            <div id="sujit_typing_text_element"
+              class="text-xl md:text-2xl font-mono sujit_typing_animation_loader sujit_slide_up_animation"
+              style="animation-delay: 0.4s;">
+              Loading Portfolio...
             </div>
+          </div>
 
-            <!-- Stats Cards -->
-            <div class="absolute stats-card-top hero-card rounded-2xl p-3 sm:p-4">
-              <div class="text-center">
-                <div class="text-lg sm:text-xl font-bold text-purple-300">
-                  2+
+          <!-- Progress Bar -->
+          <div class="w-80 max-w-full mx-auto sujit_slide_up_animation" style="animation-delay: 0.6s;">
+            <div class="rounded-full h-2 mb-4" style="background-color: #374151;">
+              <div id="sujit_progress_bar_fill" class="h-2 rounded-full transition-all duration-300 ease-out"
+                style="width: 0%; background: linear-gradient(to right, #a855f7, #ec4899);"></div>
+            </div>
+            <div class="sujit_gray_text text-sm font-mono">
+              <span id="sujit_percentage_text">0</span>% Complete
+            </div>
+          </div>
+
+          <!-- Code Snippets -->
+          <div class="mt-8 sujit_slide_up_animation" style="animation-delay: 0.8s;">
+            <div class="sujit_code_block_style rounded-lg p-4 max-w-md mx-auto">
+              <div class="text-left font-mono text-sm sujit_code_colors">
+                <div class="sujit_gray_comment">// Initializing awesome portfolio</div>
+                <div class="sujit_purple_keyword">const <span class="sujit_white_text">developer</span> = {</div>
+                <div class="ml-4 sujit_pink_property">name: <span class="sujit_yellow_string">'Sujit Samanta'</span>,
                 </div>
-                <div class="text-xs text-text-gray">Years Exp</div>
-              </div>
-            </div>
-
-            <div class="absolute stats-card-bottom hero-card rounded-2xl p-3 sm:p-4">
-              <div class="text-center">
-                <div class="text-lg sm:text-xl font-bold text-purple-300">
-                  5+
-                </div>
-                <div class="text-xs text-text-gray">Projects</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Scroll indicator -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 hidden lg:block">
-        <div data-aos="zoom-in-down" class="flex flex-col items-center">
-          <a href="#about" class="text-text-gray text-base mb-2">Scroll Down</a>
-          <a href="#about">
-            <div class="w-1 h-10 bg-gradient-to-b from-purple-400 to-transparent"></div>
-          </a>
-
-          <div data-aos="" class="w-8 h-8 border-2 border-purple-400 rounded-full flex items-center justify-center">
-            <a href="#about">
-              <i class="fas fa-chevron-down text-purple-400 text-xs animate-bounce"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- back to home -->
-  <a href="#home">
-    <button id="backToHomeBtn"
-      class="sticky w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center text-white opacity-100 visible transition-all duration-300 hover:scale-110 glow-effect z-50 shadow-lg"
-      href="#home" title="Back to Home" style="position: fixed; bottom: 20px; left: 20px">
-      <i class="fas fa-home text-lg"></i>
-    </button>
-  </a>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div data-aos="zoom-in-up" class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-          I'm a Software Engineer.
-        </h2>
-        <p class="text-text-gray mb-2">
-          Currently, I'm a Parsuing in BCA under
-          <span class="text-red-400">❤️</span>
-          <span class="text-purple-300">MAKUT Univarsity</span>
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-col-reverse">
-        <!-- Left Content -->
-        <div data-aos="zoom-in-up" class="order-2 lg:order-1">
-          <h3 class="text-2xl font-bold mb-6">About Me</h3>
-          <p class="text-gray-300 leading-relaxed mb-6">
-            Hi, I'm Sujit Samanta, a passionate and aspiring Web Developer currently pursuing my Bachelor of Computer Applications (BCA) at Contai College of Learning and Management Science, affiliated with MAKAUT. I’m highly enthusiastic about web technologies, programming, and continuous learning in the field of software development.
-          </p>
-          <p class="text-gray-300 leading-relaxed mb-8">
-            I’ve worked on various academic and personal projects that reflect my understanding of HTML, CSS, JAVASCRIPT, PHP, and LARAVEL. I also enjoy solving algorithmic challenges using C programming, where I’ve implemented popular data structure DSA algorithms like Merge Sort, Quick Sort, Insertion Sort, and even logical games like Tower of Hanoi using recursion.
-          </p>
-
-          <!-- Skills -->
-          <div class="space-y-4 mt-20">
-            <div class=" ">
-              <div class="flex justify-between mb-2">
-                <span class="text-white font-medium">Frontend Development</span>
-                <span class="text-purple-300">80%</span>
-              </div>
-              <div class="w-full bg-gray-700 rounded-full h-2">
-                <div class="skill-bar w-[80%] h-2 rounded-full"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="text-white font-medium">UI/UX Design</span>
-                <span class="text-purple-300">75%</span>
-              </div>
-              <div class="w-full bg-gray-700 rounded-full h-2">
-                <div class="skill-bar w-[75%] h-2 rounded-full"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="text-white font-medium">Backend Development</span>
-                <span class="text-purple-300">65%</span>
-              </div>
-              <div class="w-full bg-gray-700 rounded-full h-2">
-                <div class="skill-bar w-[65%] h-2 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Content - Tech Stack -->
-        <div data-aos="zoom-in-up" class="order-1 lg:order-2">
-          <h3 data-aos="" class="text-2xl font-bold mb-6 text-center">Tech Stack</h3>
-
-          <!-- Tech Icons Grid -->
-          <div class="grid grid-cols-4 gap-4 mb-8">
-            <div class="floating-element-icon tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto " style="animation-delay: -2s" >
-                <!-- <i class="fab fa-laravel text-white text-2xl"></i> -->
-                <img class="w-13" src="Assets/Documents/laravel-icon.png" alt="laravel" loading="lazy">
-            </div>
-            
-            <div class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto">
-              <!-- <i class="fa-solid fa-database text-white text-2xl"></i> -->
-              <img class="w-13" src="Assets/Documents/mysql-icon.png" alt="mysql" loading="lazy">
-
-            </div>
-            <div class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto" style="animation-delay: -2s">
-              <!-- <i class="fab fa-css3-alt text-white text-2xl"></i> -->
-              <img class="w-12" src="Assets/Documents/python-programming-language-icon.png" alt="python" loading="lazy">
-            </div>
-            <div class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto">
-              <!-- <i class="fab fa-js-square text-white text-2xl"></i> -->
-              <img class="w-13" src="Assets/Documents/tailwind-css-icon.png" alt="tailwind-css" loading="lazy">
-
-            </div>
-            <div class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto" style="animation-delay: -2s">
-              <!-- <i class="fab fa-php text-white text-2xl"></i> -->
-              <img class="w-13" src="Assets/Documents/php-programming-language-icon.png" alt="php" loading="lazy">
-            </div>
-            <div class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto" >
-              <!-- <i class="fab fa-figma text-white text-2xl"></i> -->
-              <img class="w-12" src="Assets/Documents/javascript-programming-language-icon.png" alt="javascript" loading="lazy">
-            </div>
-            <div class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto" style="animation-delay: -2s">
-              <!-- <i class="fab fa-bootstrap text-white text-2xl"></i> -->
-              <img class="w-13" src="Assets/Documents/java-programming-language-icon.png" alt="java" loading="lazy">
-            </div>
-            <div class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto" >
-              <!-- <i class="fab fa-github text-white text-2xl"></i> -->
-              <img class="w-13" src="Assets/Documents/bootstrap-5-logo-icon.png" alt="bootstrap-5" loading="lazy">
-            </div>
-          </div>
-
-          <!-- Experience Timeline -->
-          <div class="space-y-9">
-            <div class="timeline-item flex items-start space-x-4">
-              <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <!-- <i class="fas fa-briefcase text-white text-sm"></i> -->
-                <i class="fa-solid fa-laptop text-white text-sm"></i>
-              </div>
-              <div class="text-left">
-                <h4 class="font-semibold text-white">
-                  Warking on a full-stack project
-                </h4>
-                <p class="text-purple-300 text-sm">
-                  Currently in 3year • 2025 - Present
-                </p>
-                <p class="text-text-gray text-sm mt-1">
-                  Currently working on a full-stack project.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-3">
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Laravel</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">PHP</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">My Sql</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Java script</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Tailwind css</span>
-                </div>
-              </div>
-            </div>
-            <div class="timeline-item flex items-start space-x-4">
-              <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-code text-white text-sm"></i>
-              </div>
-              <div class="text-left">
-                <h4 class="font-semibold text-white">Frontend Developer</h4>
-                <p class="text-purple-300 text-sm">
-                  Studying in 2year • 2024 - 2025
-                </p>
-                <p class="text-text-gray text-sm mt-1">
-                  Developed responsive web applications using modern
-                  frameworks.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-3">
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">HTML</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">CSS</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Java script</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Tailwind css</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">bootstrap-5</span>
-                </div>
-              </div>
-            </div>
-            <div class="timeline-item flex items-start space-x-4">
-              <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-graduation-cap text-white text-sm"></i>
-              </div>
-              <div class="text-left">
-                <h4 class="font-semibold text-white">Junior Developer</h4>
-                <p class="text-purple-300 text-sm">
-                  Studying in 1year • 2023 - 2024
-                </p>
-                <p class="text-text-gray text-sm mt-1">
-                  Started my professional journey building websites and web
-                  applications.
-                </p>
-                <div class="flex flex-wrap gap-2  mt-3">
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">HTML</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">CSS</span>
-                  <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">bootstrap-5</span>
-                </div>
+                <div class="ml-4 sujit_pink_property">role: <span class="sujit_yellow_string">'Full-Stack
+                    Developer'</span>,</div>
+                <div class="ml-4 sujit_pink_property">passion: <span class="sujit_yellow_string">'Creating amazing web
+                    experiences'</span></div>
+                <div class="sujit_purple_keyword">};</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Work And Education -->
-  <div class="container mx-auto px-4 py-16 max-w-6xl">
-
-    <!-- Tab Navigation -->
-    <div data-aos="zoom-in-up" class="flex justify-center mb-12">
-      <div class="glass-effect rounded-xl p-1 flex">
-        <button id="educationTab"
-          class="tab-active px-8 py-3 rounded-lg font-semibold text-white transition-all duration-300">
-          Education
-        </button>
-        <button id="workTab" class="tab-inactive px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-          Work
-        </button>
-
-      </div>
-    </div>
-
-
-    <!-- Education Section -->
-    <div data-aos="zoom-in-up" id="educationSection" class="space-y-8">
-      <!-- College -->
-      <div class="experience-card rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="floating-element-icon flex-shrink-0">
-            <div class="company-logo w-16 h-16 rounded-full flex items-center justify-center">
-              <img src="./Assets/Documents/collage.webp" alt="collage" loading="lazy">
-            </div>
-          </div>
-          <div class="flex-grow">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Contal College of Learning and Management
-                  Science (CCLMS)</h3>
-                  <p class="text-purple-400 text-sm md:text-base">Bachelor of Computer Applications (BCA)</p>
-                  <p class=" text-sm md:text-base">Currently Pursuing BCA in 3rd Year</p>
-                
-              </div>
-              <span class="text-purple-400 text-sm md:text-base mt-2 md:mt-0">Aug 2023 - May 2025</span>
-            </div>
-            <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Organized intra-college Hackathon and Quiz for BCA students.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Design for a modern landing page for the college website.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Focused on real-world projects involving web development.</span>
-              </li>
-            </ul>
-            <div class="flex flex-wrap gap-3 mt-6">
-              <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
-                <a href="https://www.cclms.org/">
-                <i class="fas fa-globe mr-2"></i>cclms.org
-              </a>
-              </button>
-              <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
-                <a href="https://www.linkedin.com/company/contai-college-of-learning-management-science/posts/?feedView=all">
-                <i class="fa-brands fa-linkedin-in mr-2"></i>CCLMS Linkedin Page
-              </a>
-              </button> 
-              <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
-                <a href="https://www.facebook.com/cclmscontai">
-                <i class="fa-brands fa-facebook-f mr-2"></i>CCLMS Facebook Page
-              </a>
-              </button> 
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Higher Secondary -->
-      <div class="experience-card rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="floating-element-icon flex-shrink-0">
-            <div class="company-logo w-16 h-16 rounded-full flex items-center justify-center">
-              <!-- <i class="fas fa-graduation-cap text-2xl text-white"></i> -->
-              <img src="./Assets/Documents/school.jpg" alt="school" style="width: 100%;
-                  height: 100%; border-radius: 50%;" loading="lazy">
-            </div>
-          </div>
-          <div class="flex-grow">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Ramnagar Rao High School - H.S.</h3>
-                <p class="text-purple-400 text-sm md:text-base">Higher Secondary Education</p>
-                <p class=" text-sm md:text-base">Commerce Stream</p>
-              </div>
-              <span class="text-purple-400 text-sm md:text-base mt-2 md:mt-0">Jun 2020 - Mar 2022</span>
-            </div>
-            <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Accountancy, Business Studies, Economics.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Started exploring computer and web development.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Developed Financial Accounting Business Laws.</span>
-              </li>
-            </ul>
-            <div class="flex flex-wrap gap-3 mt-6">
-              <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
-                <a href="https://www.facebook.com/RamnagarRaoHighSchool">
-                <i class="fa-brands fa-facebook-f mr-2"></i>School Facebook Page
-              </a>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Work Section -->
-    <div id="workSection" class="space-y-8 hidden">
-      <!-- Personal Projects -->
-      <div class="experience-card rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="floating-element-icon flex-shrink-0">
-            <div class="company-logo w-16 h-16 rounded-xl flex items-center justify-center">
-              <i class="fab fa-github text-2xl text-white"></i>
-            </div>
-          </div>
-          <div class="flex-grow">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Personal Projects</h3>
-                <p class="text-purple-400 text-sm md:text-base">Full Stack Developer & UI/UX Designer</p>
-              </div>
-              <span class="text-purple-400 text-sm md:text-base mt-2 md:mt-0">2024 - Present</span>
-            </div>
-            <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Developed a secure browser extension for saving and autofilling private credentials with Web3/Web2
-                  login authentication <span class="text-purple-400">(link will be updated soon)</span></span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Built and deployed a Bitly-style URL shortener app with temporary link UI and backend link
-                  handling <span class="text-purple-400">(link will be updated soon)</span></span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Created a self-destructing file sharing system in PHP with encryption, password protection, and
-                  time/download-based expiration <span class="text-purple-400">(link will be updated soon)</span></span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Designed a modern landing page for the college website using GSAP, Three.js, and Locomotive.js
-                  with an Indian-themed UI <span class="text-purple-400">(link will be updated soon)</span></span>
-              </li>
-            </ul>
-            <div class="flex flex-wrap gap-3 mt-6">
-              <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
-                <a href="https://github.com/sujitsamanta">
-                <i class="fas fa-globe mr-2"></i>Hackathon Website Project
-              </a>
-              </button>
-              <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
-                <a href="https://github.com/sujitsamanta">
-                <i class="fab fa-github mr-2"></i>GitHub Profile
-              </a>
-              </button>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- College Hackathon Organizer -->
-      <div class="experience-card rounded-2xl p-6 md:p-8">
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="floating-element-icon flex-shrink-0">
-            <div class="company-logo w-16 h-16 rounded-xl flex items-center justify-center">
-              <i class="fas fa-code text-2xl text-white"></i>
-            </div>
-          </div>
-          <div class="flex-grow">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 class="text-xl md:text-2xl font-bold text-white mb-1">College Hackathon Organizer</h3>
-                <p class="text-purple-400 text-sm md:text-base">Event Head (Intra-College Hackathon & Quiz)</p>
-              </div>
-              <span class="text-purple-400 text-sm md:text-base mt-2 md:mt-0">2025 - Present</span>
-            </div>
-            <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Organized and mentored participants in a college-wide Hackathon for BCA students</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Led the UI/UX design concept integrating modern scrolling libraries and traditional Indian
-                  aesthetics</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-purple-400 mt-1">•</span>
-                <span>Managed coordination between departments (BCA, BBA, BHM) to reflect their fields in the design and
-                  experience</span>
-              </li>
-            </ul>
-            <div class="flex flex-wrap gap-3 mt-6">
-              <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
-                <a href="https://github.com/sujitsamanta">
-                <i class="fas fa-globe mr-2"></i>Hackathon Website Project
-              </a>
-              </button>
-              <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
-                <a href="https://github.com/sujitsamanta">
-                <i class="fab fa-github mr-2"></i>GitHub Profile
-              </a>
-              </button>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div data-aos="zoom-in-up" class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Featured Projects</h2>
-        <p class="text-text-gray max-w-2xl mx-auto">
-          Here are some of my recent projects that showcase my skills and
-          experience in creating digital solutions.
-        </p>
+  <div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-20 backdrop-blur-md transition-all duration-300"
+      id="navbar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <div class="text-3xl font-bold z-10">
+            <span class="gradient-text">Portfolio</span>
+          </div>
+
+          <!-- Desktop Navigation Links -->
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-xl font-semibold nav-link text-white hover:text-purple-300">Home</a>
+            <a href="#about" class="text-xl font-semibold nav-link text-white hover:text-purple-300">About</a>
+            <a href="#projects" class="text-xl font-semibold nav-link text-white hover:text-purple-300">Projects</a>
+            <a href="#contact" class="text-xl font-semibold nav-link text-white hover:text-purple-300">Contact</a>
+          </div>
+
+          <!-- CTA Button - Desktop -->
+          <div class="hidden md:block">
+            <a href="#contact"
+              class="text-lg bg-gradient-to-r from-purple-600 to-purple-800 px-6 py-2 rounded-full text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect">
+              Get in Touch
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden hamburger" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project 1 -->
-        <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
-          <div class="relative h-48 bg-gradient-to-br from-indigo-600 to-purple-600 overflow-hidden">
-           <img src="Assets/Documents/collage_web.png" alt="" loading="lazy">
-            <div class="absolute top-4 right-4">
-              <!-- <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">Concept</span> -->
-              <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Demo</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">CCLMS Collage Website</h3>
-            <p class="text-text-gray text-sm mb-4">
-              A collage website showcase mordern tachnology teaching and offer best placement package
-              in BCA, BBA, BHM.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-600 bg-opacity-30 text-indigo-300 text-xs px-2 py-1 rounded">Html</span>
-              <span class="bg-indigo-600 bg-opacity-30 text-indigo-300 text-xs px-2 py-1 rounded">Css</span>
-              <span class="bg-indigo-600 bg-opacity-30 text-indigo-300 text-xs px-2 py-1 rounded">Java Script</span>
-              <span class="bg-indigo-600 bg-opacity-30 text-indigo-300 text-xs px-2 py-1 rounded">AOS</span>
-
-            </div>
-            <div class="flex space-x-3">
-              <a href="https://sujitsamanta.github.io/Collage_Web_Page/"
-                class="flex-1 bg-indigo-600 text-white text-center py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm">
-                <i class="fas fa-external-link-alt mr-1"></i> Preview
-              </a>
-              <a href="https://github.com/sujitsamanta/Collage_Web_Page"
-                class="flex-1 border border-indigo-400 text-indigo-300 text-center py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">
-                <i class="fab fa-github mr-1"></i> Code
-              </a>
-            </div>
+      <!-- Mobile Menu -->
+      <div class="md:hidden mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#projects" class="mobile-nav-link">Projects</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+          <div class="mt-8 w-full max-w-xs">
+            <a href="#contact"
+              class="block w-full bg-gradient-to-r from-purple-600 to-purple-800 px-6 py-3 rounded-full text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 text-center glow-effect">
+              Get in Touch
+            </a>
           </div>
         </div>
-      
-        <!-- Project 2 -->
-        <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
-          <div class="relative h-48 bg-gradient-to-br from-blue-600 to-blue-800 overflow-hidden">
-            <img src="Assets/Documents/collage_management_web.png" alt="" loading="lazy">
-            <div class="absolute top-4 right-4">
-              <span class="bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">In Progress</span>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+      class="hero-section min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-8">
+      <div class="max-w-7xl mx-auto w-full">
+        <div class="hero-grid grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+          <!-- Left Content -->
+          <div data-aos="zoom-in-right" class="hero-content text-center lg:text-left order-2 lg:order-1">
+            <div class="mb-8 lg:mb-12">
+              <p class="text-text-gray mb-3 text-sm sm:text-base">
+                Hello! I Am
+                <span class="text-purple-400 font-medium font-bold">Sujit Samanta</span>
+              </p>
+
+              <div class="mb-8">
+                <p class="text-text-gray mb-3 text-sm sm:text-base">
+                  A Coder
+                </p>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 leading-tight">
+                  Hi, I'm Sujit
+                </h1>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+                  <!-- by its -->
+                  <span class="gradient-text typing-animation">cover</span>...
+                </h1>
+                <p class="text-text-gray text-sm sm:text-base mt-4 max-w-md mx-auto lg:mx-0 leading-relaxed">
+                  Crafting immersive digital experience with <span class="leading-relaxed_under_text">Laravel, My Sql,
+                    Tailwind.</span>
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Collage Management System</h3>
-            <p class="text-text-gray text-sm mb-4">
-              A collage management system with full-stack using PHP. Manage teachers, students, with real-time
-              updates and team collaboration features.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-blue-600 bg-opacity-30 text-blue-300 text-xs px-2 py-1 rounded">PHP</span>
-              <span class="bg-blue-600 bg-opacity-30 text-blue-300 text-xs px-2 py-1 rounded">My Sql</span>
-              <span class="bg-blue-600 bg-opacity-30 text-blue-300 text-xs px-2 py-1 rounded">Tailwind css</span>
-              <span class="bg-blue-600 bg-opacity-30 text-blue-300 text-xs px-2 py-1 rounded">Java Script</span>
-            </div>
-            <div class="flex space-x-3">
-              <!-- <a href="#"
-                class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
-                <i class="fas fa-external-link-alt mr-1"></i> Preview
-              </a> -->
-              <a href="https://github.com/sujitsamanta/collage_management_web"
-                class="flex-1 border border-blue-400 text-blue-300 text-center py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">
-                <i class="fab fa-github mr-1"></i> Code
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+              <a href="#projects"
+                class="bg-gradient-to-r from-purple-600 to-purple-800 px-8 py-3 rounded-full text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect text-center">
+                View My Work
+              </a>
+              <a class="border border-purple-400 px-8 py-3 rounded-full text-purple-300 font-medium hover:bg-purple-600 hover:text-white transition-all duration-300 text-center"
+                href="./Assets/Documents/CV.pdf" download>
+                Download CV
               </a>
             </div>
-          </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
-          <div class="relative h-48 bg-gradient-to-br from-red-600 to-red-800 overflow-hidden">
-            <img src="Assets/Documents/cake_web.png" alt="" loading="lazy">
-            <div class="absolute top-4 right-4">
-              <span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">Live</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Cake Shop Website</h3>
-            <p class="text-text-gray text-sm mb-4">
-              A mordern online cake_shop only frontend developement using html, css, js with AOS animaction and tranjection.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-red-600 bg-opacity-30 text-red-300 text-xs px-2 py-1 rounded">Html</span>
-              <span class="bg-red-600 bg-opacity-30 text-red-300 text-xs px-2 py-1 rounded">Css</span>
-              <span class="bg-red-600 bg-opacity-30 text-red-300 text-xs px-2 py-1 rounded">Java Script</span>
-              <span class="bg-red-600 bg-opacity-30 text-red-300 text-xs px-2 py-1 rounded">AOS</span>
-            </div>
-            <div class="flex space-x-3">
-              <a href="https://sujitsamanta.github.io/Cacke-Resturant-/"
-                class="flex-1 bg-red-600 text-white text-center py-2 rounded-lg hover:bg-red-700 transition-colors text-sm">
-                <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-              </a>
-              <a href="https://github.com/sujitsamanta/Cacke-Resturant-"
-                class="flex-1 border border-red-400 text-red-300 text-center py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">
-                <i class="fab fa-github mr-1"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
-          <div class="relative h-48 bg-gradient-to-br from-yellow-600 to-orange-600 overflow-hidden">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <i class="fas fa-graduation-cap text-white text-4xl opacity-50"></i>
-            <!-- <img src="Assets/Documents/image_gallery.png" alt="" loading="lazy"> -->
-
-            </div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">In Progress</span>
-
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Learning Management System</h3>
-            <p class="text-text-gray text-sm mb-4">
-              An educational platform with course management, 
-              and progress tracking.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-yellow-600 bg-opacity-30 text-yellow-300 text-xs px-2 py-1 rounded">Tailwind Css</span>
-              <span class="bg-yellow-600 bg-opacity-30 text-yellow-300 text-xs px-2 py-1 rounded">PHP</span>
-              <span class="bg-yellow-600 bg-opacity-30 text-yellow-300 text-xs px-2 py-1 rounded">My Sql</span>
-            </div>
-            <div class="flex space-x-3">
-              <a href="#"
-                class="flex-1 bg-yellow-600 text-white text-center py-2 rounded-lg hover:bg-yellow-700 transition-colors text-sm">
-                <i class="fas fa-external-link-alt mr-1"></i> Demo
-              </a>
+            <!-- Social Links -->
+            <div class="flex justify-center lg:justify-start space-x-4">
               <a href="https://github.com/sujitsamanta"
-                class="flex-1 border border-yellow-400 text-yellow-300 text-center py-2 rounded-lg hover:bg-yellow-600 hover:text-white transition-colors text-sm">
-                <i class="fab fa-github mr-1"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
-          <div class="relative h-48 bg-gradient-to-br from-purple-600 to-purple-800 overflow-hidden">
-             <!-- icon -->
-             <!-- <div class="absolute inset-0 flex items-center justify-center">
-              <i class="fas fa-graduation-cap text-white text-4xl opacity-50" ></i>
-            </div> -->
-            <img src="Assets/Documents/image_gallery.png" alt="" loading="lazy">
-            
-            <div class="absolute top-4 right-4">
-              <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Demo</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Image Gallery Website</h3>
-            <p class="text-text-gray text-sm mb-4">
-              Using LARAVEL and PHP image gallery website, uplode image and title store to mysql database, and also image and title update and delete form the mysql database.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Laravel</span>
-              <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">PHP</span>
-              <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">My Sql</span>
-              <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Tailwind css</span>
-            </div>
-            <div class="flex space-x-3">
-              <!-- <a href="https://sujitsamanta.github.io/Calculator-App/"
-                class="flex-1 bg-purple-600 text-white text-center py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
-                <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-              </a> -->
-              <a href="https://github.com/sujitsamanta/Image_gallery"
-                class="flex-1 border border-purple-400 text-purple-300 text-center py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-colors text-sm">
-                <i class="fab fa-github mr-1"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
-          <div class="relative h-48 bg-gradient-to-br from-green-600 to-green-800 overflow-hidden">
-            <!-- icon -->
-            <!-- <div class="absolute inset-0 flex items-center justify-center">
-              <i class="fas fa-graduation-cap text-white text-4xl opacity-50"></i>
-            </div> -->
-           <img src="Assets/Documents/wether.png" alt="" loading="lazy">
-            <div class="absolute top-4 right-4">
-              <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Demo</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Weather Website</h3>
-            <p class="text-text-gray text-sm mb-4">
-              A real-time data weather website that culect data through API call "api.openweathermap.org".
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-green-600 bg-opacity-30 text-green-300 text-xs px-2 py-1 rounded">Html</span>
-              <span class="bg-green-600 bg-opacity-30 text-green-300 text-xs px-2 py-1 rounded">Css</span>
-              <span class="bg-green-600 bg-opacity-30 text-green-300 text-xs px-2 py-1 rounded">Java Script</span>
-              <span class="bg-green-600 bg-opacity-30 text-green-300 text-xs px-2 py-1 rounded">API Handling</span>
-            </div>
-            <div class="flex space-x-3">
-              <a href="https://sujitsamanta.github.io/Weather_app/"
-                class="flex-1 bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
-                <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-              </a>
-              <a href="https://github.com/sujitsamanta/Weather_app"
-                class="flex-1 border border-green-400 text-green-300 text-center py-2 rounded-lg hover:bg-green-600 hover:text-white transition-colors text-sm">
-                <i class="fab fa-github mr-1"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- View More Button -->
-      <div data-aos="zoom-in-up" class="floating-element-icon text-center mt-14">
-        <a href="https://github.com/sujitsamanta?tab=repositories"
-          class="inline-flex items-center bg-gradient-to-r from-purple-600 to-purple-800 px-8 py-3 rounded-full text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect">
-          <i class="fab fa-github mr-2"></i>
-          View All Projects on GitHub
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div data-aos="zoom-in-up" class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-          Let's Work Together
-        </h2>
-        <p class="text-text-gray max-w-2xl mx-auto">
-          Have a project in mind? I'd love to hear about it. Let's discuss how
-          we can bring your ideas to life.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Contact Info -->
-        <div data-aos="zoom-in-up">
-          <h3 class="text-2xl font-bold mb-8">Get in Touch</h3>
-
-          <div class="space-y-6">
-            <!-- Email -->
-            <div class="flex items-center space-x-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
-                <i class="fas fa-envelope text-white"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-white">Email</h4>
-                <p class="text-text-gray">sujitsamanta510@gmail.com</p>
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="flex items-center space-x-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
-                <i class="fas fa-phone text-white"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-white">Phone</h4>
-                <p class="text-text-gray">+91 9907246586</p>
-              </div>
-            </div>
-
-            <!-- Location -->
-            <div class="flex items-center space-x-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
-                <i class="fas fa-map-marker-alt text-white"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-white">Location</h4>
-                <p class="text-text-gray">India, West Bangal</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Social Links -->
-          <div class="mt-8">
-            <h4 class="font-semibold text-white mb-4">Follow Me</h4>
-            <div class="flex space-x-4">
-              <a style="animation-delay: 0" href="https://github.com/sujitsamanta"
-                class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
                 <i class="fab fa-github text-white"></i>
               </a>
-              <a style="animation-delay: -1s" href="https://www.linkedin.com/in/sujit-samanta510/"
-                class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+              <a style="animation-delay: -1s" style="animation-delay: -1s"
+                href="https://www.linkedin.com/in/sujit-samanta510/"
+                class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
                 <i class="fab fa-linkedin text-white"></i>
               </a>
               <a style="animation-delay: -2s" href="https://www.facebook.com/sujit.samanta.122634"
-                class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
                 <i class="fab fa-facebook-f text-white"></i>
               </a>
               <a style="animation-delay: -3s" href="https://www.instagram.com/sujitsamanta38/"
-                class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
                 <i class="fab fa-instagram text-white"></i>
               </a>
             </div>
           </div>
+
+          <!-- Right Content - Character/Visual -->
+          <div data-aos="zoom-in-left" class="hero-visual flex justify-center order-1 lg:order-2">
+            <div class="relative">
+              <!-- Pulse rings -->
+              <div class="absolute inset-0 rounded-full border-2 border-purple-400 opacity-20 pulse-ring"></div>
+              <div class="absolute inset-0 rounded-full border-2 border-purple-300 opacity-10 pulse-ring"
+                style="animation-delay: -1s"></div>
+
+              <!-- Main circle -->
+              <div
+                class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-purple-600 to-purple-800 glow-effect flex items-center justify-center relative overflow-hidden">
+                <!-- Character Illustration -->
+                <div class="text-6xl sm:text-7xl lg:text-8xl floating-element">
+                  <img
+                    class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-purple-300 rounded-full flex items-center justify-center"
+                    src="Assets/Documents/1752808374692-01.jpeg.jpg" alt="" loading="lazy" />
+                </div>
+
+                <!-- Floating elements -->
+                <div class="absolute top-10 right-20 w-5 h-5 bg-yellow-400 rounded-full floating-element"
+                  style="animation-delay: -2s"></div>
+                <div class="absolute bottom-12 left-12 w-5 h-5 bg-pink-400 rounded-full floating-element"
+                  style="animation-delay: -3s"></div>
+                <div class="absolute top-10 left-20 w-7 h-7 bg-blue-400 rounded-full floating-element"
+                  style="animation-delay: -4s"></div>
+              </div>
+
+              <!-- Stats Cards -->
+              <div class="absolute stats-card-top hero-card rounded-2xl p-3 sm:p-4">
+                <div class="text-center">
+                  <div class="text-lg sm:text-xl font-bold text-purple-300">
+                    2+
+                  </div>
+                  <div class="text-xs text-text-gray">Years Exp</div>
+                </div>
+              </div>
+
+              <div class="absolute stats-card-bottom hero-card rounded-2xl p-3 sm:p-4">
+                <div class="text-center">
+                  <div class="text-lg sm:text-xl font-bold text-purple-300">
+                    5+
+                  </div>
+                  <div class="text-xs text-text-gray">Projects</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Contact Form -->
-        <div data-aos="zoom-in-up" class="contact-form rounded-2xl p-8">
-          <form class="space-y-6" action="https://api.web3forms.com/submit" method="POST" id="form">
+        <!-- Scroll indicator -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 hidden lg:block">
+          <div data-aos="zoom-in-down" class="flex flex-col items-center">
+            <a href="#about" class="text-text-gray text-base mb-2">Scroll Down</a>
+            <a href="#about">
+              <div class="w-1 h-10 bg-gradient-to-b from-purple-400 to-transparent"></div>
+            </a>
 
-                <!-- Replace with your Access Key -->
-                <input type="hidden" name="access_key" value="07ae5c9a-5b4a-4d19-b78c-4a916a197f5d">
-
-                 <!-- result -->
-                 <div id="result" class="block text-white text-lg mb-2 text-center rounded-md border-2 border-solid border-purple-500 ">
-                 </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-white font-medium mb-2">First Name</label>
-                <input name="firstname" type="text"
-                  class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
-                  placeholder="First Name" />
-              </div>
-              <div>
-                <label class="block text-white font-medium mb-2">Last Name</label>
-                <input name="lastname" type="text"
-                  class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
-                  placeholder="Last Name" />
-              </div>
+            <div data-aos="" class="w-8 h-8 border-2 border-purple-400 rounded-full flex items-center justify-center">
+              <a href="#about">
+                <i class="fas fa-chevron-down text-purple-400 text-xs animate-bounce"></i>
+              </a>
             </div>
-
-            <div>
-              <label class="block text-white font-medium mb-2">Email ID</label>
-              <input name="emailid" type="email"
-                class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
-                placeholder="Email id" />
-            </div>
-            <div>
-              <label class="block text-white font-medium mb-2">Message</label>
-              <textarea name="message" rows="5"
-                class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none resize-none"
-                placeholder="Tell me about your project..."></textarea>
-            </div>
-
-                <!-- checkbox -->
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-            <button type="submit"
-              class="w-full bg-gradient-to-r from-purple-600 to-purple-800 px-8 py-4 rounded-lg text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect">
-              <p class="floating-element-icon">
-                <i class=" fas fa-paper-plane mr-2"></i>
-              Send Message
-
-              </p>
-              
-            </button>
-
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-700 border-opacity-30">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- Brand -->
-        <div data-aos="fade-up" class="md:col-span-2">
-          <div class="text-2xl font-bold mb-4">
-            <span class="gradient-text">Portfolio</span>
-          </div>
-          <p class="text-text-gray mb-6 max-w-md">
-            A passionate software engineer creating digital experiences that
-            make a difference. Let's build something amazing together.
+    <!-- back to home -->
+    <a href="#home">
+      <button id="backToHomeBtn"
+        class="sticky w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center text-white opacity-100 visible transition-all duration-300 hover:scale-110 glow-effect z-50 shadow-lg"
+        href="#home" title="Back to Home" style="position: fixed; bottom: 20px; left: 20px">
+        <i class="fas fa-home text-lg"></i>
+      </button>
+    </a>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 mt-5">
+      <div class="max-w-6xl mx-auto">
+        <div data-aos="zoom-in-up" class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            I'm a Software Engineer.
+          </h2>
+          <p class="text-text-gray mb-2">
+            Currently, I'm a Parsuing in BCA under
+            <span class="text-red-400">❤️</span>
+            <span class="text-purple-300">MAKUT Univarsity</span>
           </p>
-          <div class="flex space-x-4">
-            <a style="animation-delay: 0" href="https://github.com/sujitsamanta"
-              class="floating-element-icon w-10 h-10 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
-              <i class="fab fa-github text-white text-sm"></i>
-            </a>
-            <a style="animation-delay: -1s" href="https://www.linkedin.com/in/sujit-samanta510/"
-              class="floating-element-icon w-10 h-10 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
-              <i class="fab fa-linkedin text-white text-sm"></i>
-            </a>
-            <a style="animation-delay: -2s" href="https://www.facebook.com/sujit.samanta.122634"
-              class="floating-element-icon w-10 h-10 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
-              <i class="fab fa-facebook-f text-white text-sm"></i>
-            </a>
-            <a style="animation-delay: -3s" href="https://www.instagram.com/sujitsamanta38/"
-              class="floating-element-icon w-10 h-10 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
-              <i class="fab fa-instagram text-white text-sm"></i>
-            </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-col-reverse">
+          <!-- Left Content -->
+          <div data-aos="zoom-in-up" class="order-2 lg:order-1">
+            <h3 class="text-2xl font-bold mb-6">About Me</h3>
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Hi, I'm Sujit Samanta, a passionate and aspiring Web Developer currently pursuing my Bachelor of Computer
+              Applications (BCA) at Contai College of Learning and Management Science, affiliated with MAKAUT. I’m
+              highly enthusiastic about web technologies, programming, and continuous learning in the field of
+              software development.
+            </p>
+            <p class="text-gray-300 leading-relaxed mb-8">
+              I’ve worked on various academic and personal projects that reflect my understanding of HTML, CSS,
+              JAVASCRIPT, PHP, and LARAVEL. I also enjoy solving algorithmic challenges using C programming, where I’ve
+              implemented popular data structure DSA algorithms like Merge Sort, Quick Sort, Insertion Sort, and even
+              logical games like Tower of Hanoi using recursion.
+            </p>
+
+            <!-- Skills -->
+            <div class="space-y-4 mt-20">
+              <div class=" ">
+                <div class="flex justify-between mb-2">
+                  <span class="text-white font-medium">Frontend Development</span>
+                  <span class="text-purple-300">80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div class="skill-bar w-[80%] h-2 rounded-full"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-white font-medium">UI/UX Design</span>
+                  <span class="text-purple-300">75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div class="skill-bar w-[75%] h-2 rounded-full"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-white font-medium">Backend Development</span>
+                  <span class="text-purple-300">65%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div class="skill-bar w-[65%] h-2 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content - Tech Stack -->
+          <div data-aos="zoom-in-up" class="order-1 lg:order-2">
+            <h3 data-aos="" class="text-2xl font-bold mb-6 text-center">Tech Stack</h3>
+
+            <!-- Tech Icons Grid -->
+            <div class="grid grid-cols-4 gap-4 mb-8">
+              <div
+                class="floating-element-icon tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto "
+                style="animation-delay: -2s">
+                <!-- <i class="fab fa-laravel text-white text-2xl"></i> -->
+                <img class="w-13" src="Assets/Documents/laravel-icon.png" alt="laravel" loading="lazy">
+              </div>
+
+              <div
+                class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto">
+                <!-- <i class="fa-solid fa-database text-white text-2xl"></i> -->
+                <img class="w-13" src="Assets/Documents/mysql-icon.png" alt="mysql" loading="lazy">
+
+              </div>
+              <div
+                class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto"
+                style="animation-delay: -2s">
+                <!-- <i class="fab fa-css3-alt text-white text-2xl"></i> -->
+                <img class="w-12" src="Assets/Documents/python-programming-language-icon.png" alt="python"
+                  loading="lazy">
+              </div>
+              <div
+                class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto">
+                <!-- <i class="fab fa-js-square text-white text-2xl"></i> -->
+                <img class="w-13" src="Assets/Documents/tailwind-css-icon.png" alt="tailwind-css" loading="lazy">
+
+              </div>
+              <div
+                class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto"
+                style="animation-delay: -2s">
+                <!-- <i class="fab fa-php text-white text-2xl"></i> -->
+                <img class="w-13" src="Assets/Documents/php-programming-language-icon.png" alt="php" loading="lazy">
+              </div>
+              <div
+                class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto">
+                <!-- <i class="fab fa-figma text-white text-2xl"></i> -->
+                <img class="w-12" src="Assets/Documents/javascript-programming-language-icon.png" alt="javascript"
+                  loading="lazy">
+              </div>
+              <div
+                class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto"
+                style="animation-delay: -2s">
+                <!-- <i class="fab fa-bootstrap text-white text-2xl"></i> -->
+                <img class="w-13" src="Assets/Documents/java-programming-language-icon.png" alt="java" loading="lazy">
+              </div>
+              <div
+                class="floating-element-icon  tech-icon w-16 h-16 rounded-lg flex items-center justify-center mx-auto">
+                <!-- <i class="fab fa-github text-white text-2xl"></i> -->
+                <img class="w-13" src="Assets/Documents/bootstrap-5-logo-icon.png" alt="bootstrap-5" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="space-y-9">
+              <div class="timeline-item flex items-start space-x-4">
+                <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <!-- <i class="fas fa-briefcase text-white text-sm"></i> -->
+                  <i class="fa-solid fa-laptop text-white text-sm"></i>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-white">
+                    Warking on a full-stack project
+                  </h4>
+                  <p class="text-purple-300 text-sm">
+                    Currently in 3year • 2025 - Present
+                  </p>
+                  <p class="text-text-gray text-sm mt-1">
+                    Currently working on a full-stack project.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Laravel</span>
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">PHP</span>
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">My Sql</span>
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Java
+                      script</span>
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Tailwind
+                      css</span>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item flex items-start space-x-4">
+                <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-code text-white text-sm"></i>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-white">Frontend Developer</h4>
+                  <p class="text-purple-300 text-sm">
+                    Studying in 2year • 2024 - 2025
+                  </p>
+                  <p class="text-text-gray text-sm mt-1">
+                    Developed responsive web applications using modern
+                    frameworks.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">HTML</span>
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">CSS</span>
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Java
+                      script</span>
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Tailwind
+                      css</span>
+                    <span
+                      class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">bootstrap-5</span>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item flex items-start space-x-4">
+                <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-graduation-cap text-white text-sm"></i>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-white">Junior Developer</h4>
+                  <p class="text-purple-300 text-sm">
+                    Studying in 1year • 2023 - 2024
+                  </p>
+                  <p class="text-text-gray text-sm mt-1">
+                    Started my professional journey building websites and web
+                    applications.
+                  </p>
+                  <div class="flex flex-wrap gap-2  mt-3">
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">HTML</span>
+                    <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">CSS</span>
+                    <span
+                      class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">bootstrap-5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work And Education -->
+    <div class="container mx-auto px-4 py-16 max-w-6xl">
+
+      <!-- Tab Navigation -->
+      <div data-aos="zoom-in-up" class="flex justify-center mb-12">
+        <div class="glass-effect rounded-xl p-1 flex">
+          <button id="educationTab"
+            class="tab-active px-8 py-3 rounded-lg font-semibold text-white transition-all duration-300">
+            Education
+          </button>
+          <button id="workTab" class="tab-inactive px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+            Work
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- Education Section -->
+      <div data-aos="zoom-in-up" id="educationSection" class="space-y-8">
+        <!-- College -->
+        <div class="experience-card rounded-2xl p-6 md:p-8">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="floating-element-icon flex-shrink-0">
+              <div class="company-logo w-16 h-16 rounded-full flex items-center justify-center">
+                <img src="./Assets/Documents/collage.webp" alt="collage" loading="lazy">
+              </div>
+            </div>
+            <div class="flex-grow">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Contal College of Learning and Management
+                    Science (CCLMS)</h3>
+                  <p class="text-purple-400 text-sm md:text-base">Bachelor of Computer Applications (BCA)</p>
+                  <p class=" text-sm md:text-base">Currently Pursuing BCA in 3rd Year</p>
+
+                </div>
+                <span class="text-purple-400 text-sm md:text-base mt-2 md:mt-0">Aug 2023 - May 2025</span>
+              </div>
+              <ul class="space-y-3 text-gray-300 text-sm md:text-base">
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Organized intra-college Hackathon and Quiz for BCA students.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Design for a modern landing page for the college website.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Focused on real-world projects involving web development.</span>
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3 mt-6">
+                <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
+                  <a href="https://www.cclms.org/">
+                    <i class="fas fa-globe mr-2"></i>cclms.org
+                  </a>
+                </button>
+                <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
+                  <a
+                    href="https://www.linkedin.com/company/contai-college-of-learning-management-science/posts/?feedView=all">
+                    <i class="fa-brands fa-linkedin-in mr-2"></i>CCLMS Linkedin Page
+                  </a>
+                </button>
+                <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
+                  <a href="https://www.facebook.com/cclmscontai">
+                    <i class="fa-brands fa-facebook-f mr-2"></i>CCLMS Facebook Page
+                  </a>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div data-aos="fade-up">
-          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li>
-              <a href="#about" class="text-text-gray hover:text-purple-400 transition-colors duration-300">About</a>
-            </li>
-            <li>
-              <a href="#projects"
-                class="text-text-gray hover:text-purple-400 transition-colors duration-300">Projects</a>
-            </li>
-            <li>
-              <a href="#contact" class="text-text-gray hover:text-purple-400 transition-colors duration-300">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <!-- Higher Secondary -->
+        <div class="experience-card rounded-2xl p-6 md:p-8">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="floating-element-icon flex-shrink-0">
+              <div class="company-logo w-16 h-16 rounded-full flex items-center justify-center">
+                <!-- <i class="fas fa-graduation-cap text-2xl text-white"></i> -->
+                <img src="./Assets/Documents/school.jpg" alt="school" style="width: 100%;
+                  height: 100%; border-radius: 50%;" loading="lazy">
+              </div>
+            </div>
+            <div class="flex-grow">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Ramnagar Rao High School - H.S.</h3>
+                  <p class="text-purple-400 text-sm md:text-base">Higher Secondary Education</p>
+                  <p class=" text-sm md:text-base">Commerce Stream</p>
+                </div>
+                <span class="text-purple-400 text-sm md:text-base mt-2 md:mt-0">Jun 2020 - Mar 2022</span>
+              </div>
+              <ul class="space-y-3 text-gray-300 text-sm md:text-base">
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Accountancy, Business Studies, Economics.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Started exploring computer and web development.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Developed Financial Accounting Business Laws.</span>
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3 mt-6">
+                <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
+                  <a href="https://www.facebook.com/RamnagarRaoHighSchool">
+                    <i class="fa-brands fa-facebook-f mr-2"></i>School Facebook Page
+                  </a>
 
-        <!-- Services -->
-        <div data-aos="fade-up">
-          <h4 class="text-white font-semibold mb-4">Contact Me</h4>
-          <ul class="space-y-2">
-            <li>
-              <a href="#contact" class="text-text-gray hover:text-purple-400 transition-colors duration-300">sujitsamanta510@gmail.com</a>
-            </li>
-            <li>
-              <a href="#contact" class="text-text-gray hover:text-purple-400 transition-colors duration-300">+91 9907246586</a>
-            </li>
-            <li>
-              <a href="#contact" class="text-text-gray hover:text-purple-400 transition-colors duration-300">India, West Bangal</a>
-            </li>
-            
-          </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+
+      <!-- Work Section -->
+      <div id="workSection" class="space-y-8 hidden">
+        <!-- Personal Projects -->
+        <div class="experience-card rounded-2xl p-6 md:p-8">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="floating-element-icon flex-shrink-0">
+              <div class="company-logo w-16 h-16 rounded-xl flex items-center justify-center">
+                <i class="fab fa-github text-2xl text-white"></i>
+              </div>
+            </div>
+            <div class="flex-grow">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h3 class="text-xl md:text-2xl font-bold text-white mb-1">Personal Projects</h3>
+                  <p class="text-purple-400 text-sm md:text-base">Full Stack Developer & UI/UX Designer</p>
+                </div>
+                <span class="text-purple-400 text-sm md:text-base mt-2 md:mt-0">2024 - Present</span>
+              </div>
+              <ul class="space-y-3 text-gray-300 text-sm md:text-base">
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Developed a secure browser extension for saving and autofilling private credentials with
+                    Web3/Web2
+                    login authentication <span class="text-purple-400">(link will be updated soon)</span></span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Built and deployed a Bitly-style URL shortener app with temporary link UI and backend link
+                    handling <span class="text-purple-400">(link will be updated soon)</span></span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Created a self-destructing file sharing system in PHP with encryption, password protection, and
+                    time/download-based expiration <span class="text-purple-400">(link will be updated
+                      soon)</span></span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Designed a modern landing page for the college website using GSAP, Three.js, and Locomotive.js
+                    with an Indian-themed UI <span class="text-purple-400">(link will be updated soon)</span></span>
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3 mt-6">
+                <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
+                  <a href="https://github.com/sujitsamanta">
+                    <i class="fas fa-globe mr-2"></i>Hackathon Website Project
+                  </a>
+                </button>
+                <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
+                  <a href="https://github.com/sujitsamanta">
+                    <i class="fab fa-github mr-2"></i>GitHub Profile
+                  </a>
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- College Hackathon Organizer -->
+        <div class="experience-card rounded-2xl p-6 md:p-8">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="floating-element-icon flex-shrink-0">
+              <div class="company-logo w-16 h-16 rounded-xl flex items-center justify-center">
+                <i class="fas fa-code text-2xl text-white"></i>
+              </div>
+            </div>
+            <div class="flex-grow">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h3 class="text-xl md:text-2xl font-bold text-white mb-1">College Hackathon Organizer</h3>
+                  <p class="text-purple-400 text-sm md:text-base">Event Head (Intra-College Hackathon & Quiz)</p>
+                </div>
+                <span class="text-purple-400 text-sm md:text-base mt-2 md:mt-0">2025 - Present</span>
+              </div>
+              <ul class="space-y-3 text-gray-300 text-sm md:text-base">
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Organized and mentored participants in a college-wide Hackathon for BCA students</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Led the UI/UX design concept integrating modern scrolling libraries and traditional Indian
+                    aesthetics</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span>Managed coordination between departments (BCA, BBA, BHM) to reflect their fields in the design
+                    and
+                    experience</span>
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-3 mt-6">
+                <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
+                  <a href="https://github.com/sujitsamanta">
+                    <i class="fas fa-globe mr-2"></i>Hackathon Website Project
+                  </a>
+                </button>
+                <button class="glass-effect px-4 py-2 rounded-lg text-sm hover:bg-purple-600 transition-colors">
+                  <a href="https://github.com/sujitsamanta">
+                    <i class="fab fa-github mr-2"></i>GitHub Profile
+                  </a>
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </footer>
 
-  <h6 style="text-align: center">Made by -&#128187;- Sujit Samanta</h6>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div data-aos="zoom-in-up" class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Featured Projects</h2>
+          <p class="text-text-gray max-w-2xl mx-auto">
+            Here are some of my recent projects that showcase my skills and
+            experience in creating digital solutions.
+          </p>
+        </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
+            <div class="relative h-48 bg-gradient-to-br from-indigo-600 to-purple-600 overflow-hidden">
+              <img src="Assets/Documents/collage_web.png" alt="" loading="lazy">
+              <div class="absolute top-4 right-4">
+                <!-- <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">Concept</span> -->
+                <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Demo</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">CCLMS Collage Website</h3>
+              <p class="text-text-gray text-sm mb-4">
+                A collage website showcase mordern tachnology teaching and offer best placement package
+                in BCA, BBA, BHM.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-600 bg-opacity-30 text-indigo-300 text-xs px-2 py-1 rounded">Html</span>
+                <span class="bg-indigo-600 bg-opacity-30 text-indigo-300 text-xs px-2 py-1 rounded">Css</span>
+                <span class="bg-indigo-600 bg-opacity-30 text-indigo-300 text-xs px-2 py-1 rounded">Java Script</span>
+                <span class="bg-indigo-600 bg-opacity-30 text-indigo-300 text-xs px-2 py-1 rounded">AOS</span>
+
+              </div>
+              <div class="flex space-x-3">
+                <a href="https://sujitsamanta.github.io/Collage_Web_Page/"
+                  class="flex-1 bg-indigo-600 text-white text-center py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i> Preview
+                </a>
+                <a href="https://github.com/sujitsamanta/Collage_Web_Page"
+                  class="flex-1 border border-indigo-400 text-indigo-300 text-center py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">
+                  <i class="fab fa-github mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
+            <div class="relative h-48 bg-gradient-to-br from-blue-600 to-blue-800 overflow-hidden">
+              <img src="Assets/Documents/collage_management_web.png" alt="" loading="lazy">
+              <div class="absolute top-4 right-4">
+                <span class="bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">In Progress</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Collage Management System</h3>
+              <p class="text-text-gray text-sm mb-4">
+                A collage management system with full-stack using PHP. Manage teachers, students, with real-time
+                updates and team collaboration features.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-600 bg-opacity-30 text-blue-300 text-xs px-2 py-1 rounded">PHP</span>
+                <span class="bg-blue-600 bg-opacity-30 text-blue-300 text-xs px-2 py-1 rounded">My Sql</span>
+                <span class="bg-blue-600 bg-opacity-30 text-blue-300 text-xs px-2 py-1 rounded">Tailwind css</span>
+                <span class="bg-blue-600 bg-opacity-30 text-blue-300 text-xs px-2 py-1 rounded">Java Script</span>
+              </div>
+              <div class="flex space-x-3">
+                <!-- <a href="#"
+                class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                <i class="fas fa-external-link-alt mr-1"></i> Preview
+              </a> -->
+                <a href="https://github.com/sujitsamanta/collage_management_web"
+                  class="flex-1 border border-blue-400 text-blue-300 text-center py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">
+                  <i class="fab fa-github mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
+            <div class="relative h-48 bg-gradient-to-br from-red-600 to-red-800 overflow-hidden">
+              <img src="Assets/Documents/cake_web.png" alt="" loading="lazy">
+              <div class="absolute top-4 right-4">
+                <span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">Live</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Cake Shop Website</h3>
+              <p class="text-text-gray text-sm mb-4">
+                A mordern online cake_shop only frontend developement using html, css, js with AOS animaction and
+                tranjection.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-red-600 bg-opacity-30 text-red-300 text-xs px-2 py-1 rounded">Html</span>
+                <span class="bg-red-600 bg-opacity-30 text-red-300 text-xs px-2 py-1 rounded">Css</span>
+                <span class="bg-red-600 bg-opacity-30 text-red-300 text-xs px-2 py-1 rounded">Java Script</span>
+                <span class="bg-red-600 bg-opacity-30 text-red-300 text-xs px-2 py-1 rounded">AOS</span>
+              </div>
+              <div class="flex space-x-3">
+                <a href="https://sujitsamanta.github.io/Cacke-Resturant-/"
+                  class="flex-1 bg-red-600 text-white text-center py-2 rounded-lg hover:bg-red-700 transition-colors text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                </a>
+                <a href="https://github.com/sujitsamanta/Cacke-Resturant-"
+                  class="flex-1 border border-red-400 text-red-300 text-center py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">
+                  <i class="fab fa-github mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
+            <div class="relative h-48 bg-gradient-to-br from-yellow-600 to-orange-600 overflow-hidden">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-graduation-cap text-white text-4xl opacity-50"></i>
+                <!-- <img src="Assets/Documents/image_gallery.png" alt="" loading="lazy"> -->
+
+              </div>
+              <div class="absolute top-4 right-4">
+                <span class="bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">In Progress</span>
+
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Learning Management System</h3>
+              <p class="text-text-gray text-sm mb-4">
+                An educational platform with course management,
+                and progress tracking.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-yellow-600 bg-opacity-30 text-yellow-300 text-xs px-2 py-1 rounded">Tailwind Css</span>
+                <span class="bg-yellow-600 bg-opacity-30 text-yellow-300 text-xs px-2 py-1 rounded">PHP</span>
+                <span class="bg-yellow-600 bg-opacity-30 text-yellow-300 text-xs px-2 py-1 rounded">My Sql</span>
+              </div>
+              <div class="flex space-x-3">
+                <a href="#"
+                  class="flex-1 bg-yellow-600 text-white text-center py-2 rounded-lg hover:bg-yellow-700 transition-colors text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i> Demo
+                </a>
+                <a href="https://github.com/sujitsamanta"
+                  class="flex-1 border border-yellow-400 text-yellow-300 text-center py-2 rounded-lg hover:bg-yellow-600 hover:text-white transition-colors text-sm">
+                  <i class="fab fa-github mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
+            <div class="relative h-48 bg-gradient-to-br from-purple-600 to-purple-800 overflow-hidden">
+              <!-- icon -->
+              <!-- <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fas fa-graduation-cap text-white text-4xl opacity-50" ></i>
+            </div> -->
+              <img src="Assets/Documents/signin_login.png" alt="" loading="lazy">
+
+              <div class="absolute top-4 right-4">
+                <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Demo</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Sign in and Log in System with Email confirmaction</h3>
+              <p class="text-text-gray text-sm mb-4">
+                Using LARAVEL and PHP Signin and Login system, AUTH authentication, Secure Password Handling HASSING, Email Confirmation Functionality, Real-Time Alert Components, Database Integration in mysql.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Laravel</span>
+                <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">PHP</span>
+                <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">My Sql</span>
+                <span class="bg-purple-600 bg-opacity-30 text-purple-300 text-xs px-2 py-1 rounded">Tailwind css</span>
+              </div>
+              <div class="flex space-x-3">
+                <!-- <a href="https://sujitsamanta.github.io/Calculator-App/"
+                class="flex-1 bg-purple-600 text-white text-center py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+                <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+              </a> -->
+                <a href="https://github.com/sujitsamanta/login_app"
+                  class="flex-1 border border-purple-400 text-purple-300 text-center py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-colors text-sm">
+                  <i class="fab fa-github mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div data-aos="zoom-in" class="card-glow rounded-2xl overflow-hidden project-card group">
+            <div class="relative h-48 bg-gradient-to-br from-green-600 to-green-800 overflow-hidden">
+              <!-- icon -->
+              <!-- <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fas fa-graduation-cap text-white text-4xl opacity-50"></i>
+            </div> -->
+              <img src="Assets/Documents/image_gallery.png" alt="" loading="lazy">
+              <div class="absolute top-4 right-4">
+                <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Demo</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Image Gallery Website</h3>
+              <p class="text-text-gray text-sm mb-4">
+                Using LARAVEL and PHP Image Gallery Web App, Upload image & title store to mysql database, Image page with real-time Update & Delete buttons. Smart alert component system that confirms upload, update, or deletion success.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-green-600 bg-opacity-30 text-green-300 text-xs px-2 py-1 rounded">Laravel</span>
+                <span class="bg-green-600 bg-opacity-30 text-green-300 text-xs px-2 py-1 rounded">PHP</span>
+                <span class="bg-green-600 bg-opacity-30 text-green-300 text-xs px-2 py-1 rounded">My Sql</span>
+                <span class="bg-green-600 bg-opacity-30 text-green-300 text-xs px-2 py-1 rounded">Tailwind css</span>
+              </div>
+              <div class="flex space-x-3">
+                <!-- <a href="https://sujitsamanta.github.io/Weather_app/"
+                  class="flex-1 bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                </a> -->
+                <a href="https://github.com/sujitsamanta/Image_gallery"
+                  class="flex-1 border border-green-400 text-green-300 text-center py-2 rounded-lg hover:bg-green-600 hover:text-white transition-colors text-sm">
+                  <i class="fab fa-github mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- View More Button -->
+        <div data-aos="zoom-in-up" class="floating-element-icon text-center mt-14">
+          <a href="https://github.com/sujitsamanta?tab=repositories"
+            class="inline-flex items-center bg-gradient-to-r from-purple-600 to-purple-800 px-8 py-3 rounded-full text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect">
+            <i class="fab fa-github mr-2"></i>
+            View All Projects on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div data-aos="zoom-in-up" class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            Let's Work Together
+          </h2>
+          <p class="text-text-gray max-w-2xl mx-auto">
+            Have a project in mind? I'd love to hear about it. Let's discuss how
+            we can bring your ideas to life.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div data-aos="zoom-in-up">
+            <h3 class="text-2xl font-bold mb-8">Get in Touch</h3>
+
+            <div class="space-y-6">
+              <!-- Email -->
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">Email</h4>
+                  <p class="text-text-gray">sujitsamanta510@gmail.com</p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-phone text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">Phone</h4>
+                  <p class="text-text-gray">+91 9907246586</p>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white">Location</h4>
+                  <p class="text-text-gray">India, West Bangal</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="mt-8">
+              <h4 class="font-semibold text-white mb-4">Follow Me</h4>
+              <div class="flex space-x-4">
+                <a style="animation-delay: 0" href="https://github.com/sujitsamanta"
+                  class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                  <i class="fab fa-github text-white"></i>
+                </a>
+                <a style="animation-delay: -1s" href="https://www.linkedin.com/in/sujit-samanta510/"
+                  class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                  <i class="fab fa-linkedin text-white"></i>
+                </a>
+                <a style="animation-delay: -2s" href="https://www.facebook.com/sujit.samanta.122634"
+                  class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                  <i class="fab fa-facebook-f text-white"></i>
+                </a>
+                <a style="animation-delay: -3s" href="https://www.instagram.com/sujitsamanta38/"
+                  class="floating-element-icon w-12 h-12 bg-gray-700 bg-opacity-50 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                  <i class="fab fa-instagram text-white"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div data-aos="zoom-in-up" class="contact-form rounded-2xl p-8">
+            <form class="space-y-6" action="https://api.web3forms.com/submit" method="POST" id="form">
+
+              <!-- Replace with your Access Key -->
+              <input type="hidden" name="access_key" value="07ae5c9a-5b4a-4d19-b78c-4a916a197f5d">
+
+              <!-- result -->
+              <div id="result"
+                class="block text-white text-lg mb-2 text-center rounded-md border-2 border-solid border-purple-500 ">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-white font-medium mb-2">First Name</label>
+                  <input name="firstname" type="text"
+                    class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
+                    placeholder="First Name" />
+                </div>
+                <div>
+                  <label class="block text-white font-medium mb-2">Last Name</label>
+                  <input name="lastname" type="text"
+                    class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
+                    placeholder="Last Name" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-white font-medium mb-2">Email ID</label>
+                <input name="emailid" type="email"
+                  class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none"
+                  placeholder="Email id" />
+              </div>
+              <div>
+                <label class="block text-white font-medium mb-2">Message</label>
+                <textarea name="message" rows="5"
+                  class="form-input w-full px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none resize-none"
+                  placeholder="Tell me about your project..."></textarea>
+              </div>
+
+              <!-- checkbox -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+              <button type="submit"
+                class="w-full bg-gradient-to-r from-purple-600 to-purple-800 px-8 py-4 rounded-lg text-white font-medium hover:from-purple-700 hover:to-purple-900 transition-all duration-300 glow-effect">
+                <p class="floating-element-icon">
+                  <i class=" fas fa-paper-plane mr-2"></i>
+                  Send Message
+
+                </p>
+
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-700 border-opacity-30">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Brand -->
+          <div data-aos="fade-up" class="md:col-span-2">
+            <div class="text-2xl font-bold mb-4">
+              <span class="gradient-text">Portfolio</span>
+            </div>
+            <p class="text-text-gray mb-6 max-w-md">
+              A passionate software engineer creating digital experiences that
+              make a difference. Let's build something amazing together.
+            </p>
+            <div class="flex space-x-4">
+              <a style="animation-delay: 0" href="https://github.com/sujitsamanta"
+                class="floating-element-icon w-10 h-10 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                <i class="fab fa-github text-white text-sm"></i>
+              </a>
+              <a style="animation-delay: -1s" href="https://www.linkedin.com/in/sujit-samanta510/"
+                class="floating-element-icon w-10 h-10 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                <i class="fab fa-linkedin text-white text-sm"></i>
+              </a>
+              <a style="animation-delay: -2s" href="https://www.facebook.com/sujit.samanta.122634"
+                class="floating-element-icon w-10 h-10 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                <i class="fab fa-facebook-f text-white text-sm"></i>
+              </a>
+              <a style="animation-delay: -3s" href="https://www.instagram.com/sujitsamanta38/"
+                class="floating-element-icon w-10 h-10 bg-gray-700 bg-opacity-50 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all duration-300 backdrop-blur-sm">
+                <i class="fab fa-instagram text-white text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div data-aos="fade-up">
+            <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#about" class="text-text-gray hover:text-purple-400 transition-colors duration-300">About</a>
+              </li>
+              <li>
+                <a href="#projects"
+                  class="text-text-gray hover:text-purple-400 transition-colors duration-300">Projects</a>
+              </li>
+              <li>
+                <a href="#contact"
+                  class="text-text-gray hover:text-purple-400 transition-colors duration-300">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div data-aos="fade-up">
+            <h4 class="text-white font-semibold mb-4">Contact Me</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#contact"
+                  class="text-text-gray hover:text-purple-400 transition-colors duration-300">sujitsamanta510@gmail.com</a>
+              </li>
+              <li>
+                <a href="#contact" class="text-text-gray hover:text-purple-400 transition-colors duration-300">+91
+                  9907246586</a>
+              </li>
+              <li>
+                <a href="#contact" class="text-text-gray hover:text-purple-400 transition-colors duration-300">India,
+                  West Bangal</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <h6 style="text-align: center">Made by -&#128187;- Sujit Samanta</h6>
+  </div>
+ 
+  <script src="./Assets/script.js"></script>
   <!-- AOS animaction  -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      offset: 150,
-      duration: 550,
+    // AOS.init({
+    //   offset: 150,
+    //   duration: 550,
+    // });
+
+    // Listen for loader completion
+    document.addEventListener('sujitLoaderComplete', function () {
+      // Re-initialize AOS completely
+      setTimeout(() => {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 700,
+            offset: 150,
+            once: false,
+            mirror: true,
+          });
+        }
+      }, 100);
     });
   </script>
 
-  <script src="./Assets/script.js"></script>
+  <!-- char boot  -->
   <script>
 
-//  char boot 
     (function () {
       if (!window.chatbase || window.chatbase("getState") !== "initialized") {
         window.chatbase = (...arguments) => {
@@ -1118,6 +1255,5 @@
     })();
 
   </script>
-  </body>
-
+</body>
 </html>

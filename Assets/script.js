@@ -1,3 +1,100 @@
+// Pree loder 
+// Progress bar animation with unique variable names
+let sujitProgressValue = 0;
+const sujitProgressBarElement = document.getElementById('sujit_progress_bar_fill');
+const sujitPercentageDisplayElement = document.getElementById('sujit_percentage_text');
+
+const sujitUpdateProgressFunction = () => {
+  if (sujitProgressValue < 100) {
+    sujitProgressValue += Math.random() * 4 + 2;
+    if (sujitProgressValue > 100) sujitProgressValue = 100;
+
+    sujitProgressBarElement.style.width = sujitProgressValue + '%';
+    sujitPercentageDisplayElement.textContent = Math.floor(sujitProgressValue);
+
+    setTimeout(sujitUpdateProgressFunction, 80 + Math.random() * 120);
+  } else {
+    // Loading complete - hide loader
+    setTimeout(() => {
+      const sujitLoaderContainer = document.getElementById('sujit_main_loader_container');
+
+      // Fade out loader
+      sujitLoaderContainer.style.transform = 'scale(0.8)';
+      sujitLoaderContainer.style.opacity = '0';
+      sujitLoaderContainer.style.transition = 'all 0.5s ease-in-out';
+
+      setTimeout(() => {
+        // Completely remove loader from DOM
+        sujitLoaderContainer.remove();
+
+        // Dispatch custom event to notify that loader is complete
+        document.dispatchEvent(new CustomEvent('sujitLoaderComplete'));
+      }, 500);
+    }, 500);
+  }
+};
+
+// Start progress animation
+setTimeout(sujitUpdateProgressFunction, 300);
+
+// Dynamic typing effect for different phrases with unique variables
+const sujitLoadingPhrases = [
+  'Loading Portfolio...',
+  'Compiling Code...',
+  'Initializing Magic...',
+  'Almost Ready...'
+];
+
+let sujitCurrentPhraseIndex = 0;
+const sujitTypingDisplayElement = document.getElementById('sujit_typing_text_element');
+
+const sujitPhraseChangeInterval = setInterval(() => {
+  sujitCurrentPhraseIndex = (sujitCurrentPhraseIndex + 1) % sujitLoadingPhrases.length;
+  if (sujitTypingDisplayElement) {
+    sujitTypingDisplayElement.textContent = sujitLoadingPhrases[sujitCurrentPhraseIndex];
+  }
+}, 1500);
+
+// Clean up interval when loader is complete
+setTimeout(() => {
+  clearInterval(sujitPhraseChangeInterval);
+}, 6000);
+
+// Listen for loader completion (you can use this in your main portfolio)
+document.addEventListener('sujitLoaderComplete', function () {
+  console.log('Sujit loader completed - portfolio ready!');
+
+  // Refresh AOS animations after loader completes
+  setTimeout(() => {
+    // Check if AOS is available and refresh it
+    if (typeof AOS !== 'undefined') {
+      AOS.refresh();
+      // Force trigger animations for elements in viewport
+      AOS.refreshHard();
+    }
+
+    // Alternative: manually trigger hero section animations
+    const heroElements = document.querySelectorAll('[data-aos]');
+    heroElements.forEach(element => {
+      // Force remove and re-add AOS classes to trigger animations
+      element.classList.remove('aos-animate');
+      setTimeout(() => {
+        element.classList.add('aos-animate');
+      }, 100);
+    });
+
+    // Dispatch window resize to trigger AOS recalculation
+    window.dispatchEvent(new Event('resize'));
+
+    // Scroll to top to ensure hero section is in view
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  }, 100);
+});
+ 
+ 
+ 
+ 
  // Mobile menu functionality
  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
  const mobileMenu = document.getElementById("mobile-menu");
@@ -52,9 +149,6 @@
  mobileMenu.addEventListener("click", (e) => {
    e.stopPropagation();
  });
-
-
-
 
 
  // Smooth scrolling for navigation links

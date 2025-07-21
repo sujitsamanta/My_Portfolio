@@ -8,9 +8,197 @@ body {
       #16213e 50%,
       #0f3460 100%);
 }
-.leading-tight{
-  /* font-weight: 700; */
+
+/* Pree loder */
+ /* Isolated loader styles with specific selectors */
+ #sujit_main_loader_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: linear-gradient(135deg, #1a0b2e 0%, #2d1b69 50%, #4c1d95 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
+
+#sujit_main_loader_container * {
+  box-sizing: border-box;
+}
+
+@keyframes sujit_typing_anim {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes sujit_blink_effect {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #a855f7
+  }
+}
+
+@keyframes sujit_pulse_code_effect {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes sujit_float_motion {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sujit_rotate_gear_motion {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sujit_slide_up_motion {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sujit_fadeIn_effect {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#sujit_main_loader_container .sujit_typing_animation_loader {
+  overflow: hidden;
+  border-right: 2px solid #a855f7 !important;
+  border-left: 2px solid #a855f7 !important;
+  white-space: nowrap;
+  animation: sujit_typing_anim 2s steps(20, end) infinite alternate, sujit_blink_effect 1s infinite;
+  color: #d1d5db !important;
+}
+
+#sujit_main_loader_container .sujit_code_pulse_effect {
+  animation: sujit_pulse_code_effect 2s ease-in-out infinite;
+}
+
+#sujit_main_loader_container .sujit_floating_loader_element {
+  animation: sujit_float_motion 3s ease-in-out infinite;
+}
+
+#sujit_main_loader_container .sujit_gear_rotate_element {
+  animation: sujit_rotate_gear_motion 3s linear infinite;
+}
+
+#sujit_main_loader_container .sujit_slide_up_animation {
+  animation: sujit_slide_up_motion 0.8s ease-out forwards;
+}
+
+#sujit_main_loader_container .sujit_code_block_style {
+  background: rgba(168, 85, 247, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(168, 85, 247, 0.2) !important;
+}
+
+#sujit_main_loader_container .sujit_fade_in_effect {
+  animation: sujit_fadeIn_effect 0.8s ease-out forwards;
+}
+
+.sujit_hidden_element {
+  display: none !important;
+}
+
+/* Specific color overrides for loader text */
+#sujit_main_loader_container h1 {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+#sujit_main_loader_container .sujit_purple_text {
+  color: #a855f7 !important;
+}
+
+#sujit_main_loader_container .sujit_gray_text {
+  color: #d1d5db !important;
+}
+
+#sujit_main_loader_container .sujit_code_colors .sujit_gray_comment {
+  color: #9ca3af !important;
+}
+
+#sujit_main_loader_container .sujit_code_colors .sujit_purple_keyword {
+  color: #a855f7 !important;
+}
+
+#sujit_main_loader_container .sujit_code_colors .sujit_white_text {
+  color: #ffffff !important;
+}
+
+#sujit_main_loader_container .sujit_code_colors .sujit_pink_property {
+  color: #ec4899 !important;
+}
+
+#sujit_main_loader_container .sujit_code_colors .sujit_yellow_string {
+  color: #fbbf24 !important;
+}
+
+#sujit_main_loader_container .sujit_floating_code_purple {
+  color: #a855f7 !important;
+}
+
+#sujit_main_loader_container .sujit_floating_code_pink {
+  color: #ec4899 !important;
+}
+
+#sujit_main_loader_container .sujit_floating_code_violet {
+  color: #8b5cf6 !important;
+}
+
+
+
+
 .leading-relaxed_under_text {
   color: rgb(155, 75, 230);
   font-weight: 700;
