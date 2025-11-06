@@ -3,10 +3,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg,
-      #1a0b2e 0%,
-      #16213e 50%,
-      #0f3460 100%);
+  background: #1a0b2e;
 }
 
 /* Pree loder */
@@ -18,7 +15,7 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: 9999;
-  background: linear-gradient(135deg, #1a0b2e 0%, #2d1b69 50%, #4c1d95 100%);
+  background: #1a0b2e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,9 +207,7 @@ body {
 }
 
 .card-glow {
-  background: linear-gradient(135deg,
-      rgba(139, 90, 159, 0.1) 0%,
-      rgba(74, 44, 106, 0.1) 100%);
+  background: rgba(139, 90, 159, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(139, 90, 159, 0.2);
 }
@@ -229,7 +224,7 @@ body {
   height: 2px;
   bottom: -5px;
   left: 50%;
-  background: linear-gradient(90deg, #8b5a9f, #6b3fa0);
+  background: #8b5a9f;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -353,16 +348,11 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #8b5a9f, #6b3fa0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #8b5a9f;
 }
 
 .hero-card {
-  background: linear-gradient(135deg,
-      rgba(139, 90, 159, 0.1) 0%,
-      rgba(74, 44, 106, 0.1) 100%);
+  background: rgba(139, 90, 159, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(139, 90, 159, 0.2);
 }
@@ -476,14 +466,14 @@ body.menu-open {
 }
 
 .skill-bar {
-  background: linear-gradient(90deg, #8b5a9f, #6b3fa0);
+  background: #8b5a9f;
   height: 4px;
   border-radius: 2px;
   transition: width 2s ease-in-out;
 }
 
 .service-icon {
-  background: linear-gradient(135deg, #8b5a9f, #6b3fa0);
+  background: #8b5a9f;
   transition: all 0.3s ease;
 }
 
@@ -502,7 +492,7 @@ body.menu-open {
   top: 60px;
   width: 2px;
   height: calc(100% - 60px);
-  background: linear-gradient(180deg, #8b5a9f, transparent);
+  background: #8b5a9f;
 }
 
 .timeline-item:last-child::before {
@@ -510,9 +500,7 @@ body.menu-open {
 }
 
 .contact-form {
-  background: linear-gradient(135deg,
-      rgba(139, 90, 159, 0.05) 0%,
-      rgba(74, 44, 106, 0.05) 100%);
+  background: rgba(139, 90, 159, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(139, 90, 159, 0.1);
 }
@@ -539,7 +527,7 @@ body.menu-open {
 }
 
 .tab-active {
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: #8b5cf6;
 }
 
 .tab-inactive {
@@ -548,12 +536,12 @@ body.menu-open {
 }
 
 .experience-card {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
+  background: rgba(139, 92, 246, 0.1);
   border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .company-logo {
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  background: #8b5cf6;
 }
 
 
