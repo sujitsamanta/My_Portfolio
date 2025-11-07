@@ -560,4 +560,349 @@ body.menu-open {
   50% {
     transform: translateY(-8px);
   }
+}/* Prelo
+ader Minimal Background Integration */
+
+/* Enhanced preloader background with minimal theme */
+#sujit_main_loader_container {
+  background: #0a0a0a;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(236, 72, 153, 0.03) 0%, transparent 50%);
+}
+
+/* Preloader floating dots */
+.preloader-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 50%;
+  animation: preloaderDotFloat 15s ease-in-out infinite;
+}
+
+.preloader-dot:nth-child(1) {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+  background: rgba(168, 85, 247, 0.5);
+}
+
+.preloader-dot:nth-child(2) {
+  top: 70%;
+  right: 15%;
+  animation-delay: -5s;
+  background: rgba(236, 72, 153, 0.4);
+}
+
+.preloader-dot:nth-child(3) {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: -10s;
+  background: rgba(139, 92, 246, 0.45);
+}
+
+.preloader-dot:nth-child(4) {
+  top: 30%;
+  right: 25%;
+  animation-delay: -3s;
+  background: rgba(168, 85, 247, 0.35);
+}
+
+.preloader-dot:nth-child(5) {
+  bottom: 40%;
+  left: 60%;
+  animation-delay: -8s;
+  background: rgba(236, 72, 153, 0.3);
+}
+
+@keyframes preloaderDotFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translate(20px, -15px) scale(1.2);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-15px, 25px) scale(0.8);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(25px, 8px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* Preloader subtle grid */
+.preloader-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(168, 85, 247, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: preloaderGridShift 30s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes preloaderGridShift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(80px, 80px);
+  }
+}
+
+/* Preloader breathing glow */
+.preloader-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: preloaderBreathe 12s ease-in-out infinite;
+}
+
+.preloader-glow-1 {
+  top: 10%;
+  left: 15%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+  animation-delay: 0s;
+}
+
+.preloader-glow-2 {
+  bottom: 15%;
+  right: 20%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.06) 0%, transparent 70%);
+  animation-delay: -6s;
+}
+
+.preloader-glow-3 {
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+  animation-delay: -3s;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes preloaderBreathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* Preloader corner accents */
+.preloader-corner {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.15;
+}
+
+.preloader-corner-tl {
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.4) 0%, transparent 70%);
+  animation: preloaderCornerPulse 10s ease-in-out infinite;
+}
+
+.preloader-corner-tr {
+  top: 0;
+  right: 0;
+  background: linear-gradient(225deg, rgba(236, 72, 153, 0.3) 0%, transparent 70%);
+  animation: preloaderCornerPulse 10s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+.preloader-corner-bl {
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.35) 0%, transparent 70%);
+  animation: preloaderCornerPulse 10s ease-in-out infinite;
+  animation-delay: -2.5s;
+}
+
+.preloader-corner-br {
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(315deg, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
+  animation: preloaderCornerPulse 10s ease-in-out infinite;
+  animation-delay: -7.5s;
+}
+
+@keyframes preloaderCornerPulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.15);
+  }
+}
+
+/* Preloader scan lines */
+.preloader-scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent 50%,
+    rgba(168, 85, 247, 0.008) 50%
+  );
+  background-size: 100% 6px;
+  animation: preloaderScanMove 6s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes preloaderScanMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 6px;
+  }
+}
+
+/* Preloader vignette */
+.preloader-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+/* Enhanced progress bar with minimal theme */
+#sujit_progress_bar_fill {
+  background: linear-gradient(to right, 
+    rgba(168, 85, 247, 0.8), 
+    rgba(236, 72, 153, 0.9), 
+    rgba(139, 92, 246, 0.8)
+  ) !important;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Progress bar shimmer effect */
+#sujit_progress_bar_fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent
+  );
+  animation: progressShimmer 2s ease-in-out infinite;
+}
+
+@keyframes progressShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Enhanced code block styling */
+.sujit_code_block_style {
+  background: rgba(168, 85, 247, 0.08) !important;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(168, 85, 247, 0.25) !important;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.1);
+}
+
+/* Enhanced floating code elements */
+.sujit_floating_loader_element {
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.3));
+}
+
+/* Preloader particles */
+.preloader-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(168, 85, 247, 0.6);
+  border-radius: 50%;
+  animation: preloaderParticleDrift 20s linear infinite;
+}
+
+@keyframes preloaderParticleDrift {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-50px) translateX(20px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Reduced motion support for preloader */
+@media (prefers-reduced-motion: reduce) {
+  .preloader-dot,
+  .preloader-grid,
+  .preloader-glow,
+  .preloader-corner,
+  .preloader-scanlines,
+  .preloader-particle,
+  #sujit_progress_bar_fill::before {
+    animation: none !important;
+  }
+  
+  #sujit_main_loader_container {
+    background: #0a0a0a !important;
+  }
+}
+
+/* High contrast mode for preloader */
+@media (prefers-contrast: high) {
+  #sujit_main_loader_container {
+    background: #000000 !important;
+  }
+  
+  .preloader-dot,
+  .preloader-grid,
+  .preloader-glow,
+  .preloader-corner,
+  .preloader-scanlines {
+    opacity: 0.1 !important;
+  }
 }

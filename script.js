@@ -324,3 +324,211 @@ form.addEventListener('submit', function(e) {
 });
 
 
+// Preloader Minimal Background Integration
+class PreloaderMinimalBackground {
+  constructor() {
+    this.preloaderContainer = document.getElementById('sujit_main_loader_container');
+    this.particles = [];
+    this.maxParticles = 6;
+    
+    if (this.preloaderContainer) {
+      this.init();
+    }
+  }
+  
+  init() {
+    // Only add effects if reduced motion is not preferred
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      console.log('Reduced motion detected, using simple preloader background');
+      return;
+    }
+    
+    this.createPreloaderElements();
+    this.createPreloaderParticles();
+    
+    console.log('Preloader minimal background initialized');
+  }
+  
+  createPreloaderElements() {
+    // Create subtle grid
+    const grid = document.createElement('div');
+    grid.className = 'preloader-grid';
+    this.preloaderContainer.appendChild(grid);
+    
+    // Create floating dots
+    for (let i = 0; i < 5; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'preloader-dot';
+      this.preloaderContainer.appendChild(dot);
+    }
+    
+    // Create breathing glows
+    for (let i = 1; i <= 3; i++) {
+      const glow = document.createElement('div');
+      glow.className = `preloader-glow preloader-glow-${i}`;
+      this.preloaderContainer.appendChild(glow);
+    }
+    
+    // Create corner accents
+    const corners = ['tl', 'tr', 'bl', 'br'];
+    corners.forEach(corner => {
+      const cornerEl = document.createElement('div');
+      cornerEl.className = `preloader-corner preloader-corner-${corner}`;
+      this.preloaderContainer.appendChild(cornerEl);
+    });
+    
+    // Create scan lines
+    const scanlines = document.createElement('div');
+    scanlines.className = 'preloader-scanlines';
+    this.preloaderContainer.appendChild(scanlines);
+    
+    // Create vignette
+    const vignette = document.createElement('div');
+    vignette.className = 'preloader-vignette';
+    this.preloaderContainer.appendChild(vignette);
+  }
+  
+  createPreloaderParticles() {
+    for (let i = 0; i < this.maxParticles; i++) {
+      setTimeout(() => {
+        this.createParticle();
+      }, i * 1500);
+    }
+  }
+  
+  createParticle() {
+    if (!this.preloaderContainer || !this.preloaderContainer.parentNode) {
+      return; // Preloader has been removed
+    }
+    
+    const particle = document.createElement('div');
+    particle.className = 'preloader-particle';
+    
+    // Random horizontal position
+    const startX = Math.random() * 100;
+    particle.style.left = startX + '%';
+    particle.style.bottom = '0';
+    
+    // Random animation duration
+    const duration = 15 + Math.random() * 10;
+    particle.style.animationDuration = duration + 's';
+    
+    // Random color variation
+    const colors = [
+      'rgba(168, 85, 247, 0.6)',
+      'rgba(236, 72, 153, 0.5)',
+      'rgba(139, 92, 246, 0.55)'
+    ];
+    particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+    
+    this.preloaderContainer.appendChild(particle);
+    
+    // Remove particle after animation
+    setTimeout(() => {
+      if (particle.parentNode) {
+        particle.remove();
+      }
+      // Create new particle if preloader still exists
+      if (this.preloaderContainer && this.preloaderContainer.parentNode) {
+        setTimeout(() => {
+          this.createParticle();
+        }, Math.random() * 3000);
+      }
+    }, duration * 1000);
+  }
+  
+  // Method to intensify effects during loading
+  intensifyEffects() {
+    const dots = this.preloaderContainer.querySelectorAll('.preloader-dot');
+    const glows = this.preloaderContainer.querySelectorAll('.preloader-glow');
+    
+    dots.forEach(dot => {
+      dot.style.animationDuration = '8s';
+      dot.style.opacity = '0.8';
+    });
+    
+    glows.forEach(glow => {
+      glow.style.animationDuration = '6s';
+      glow.style.opacity = '0.4';
+    });
+  }
+  
+  // Method to create loading pulse effect
+  createLoadingPulse() {
+    const pulse = document.createElement('div');
+    pulse.style.position = 'absolute';
+    pulse.style.top = '50%';
+    pulse.style.left = '50%';
+    pulse.style.width = '100px';
+    pulse.style.height = '100px';
+    pulse.style.border = '2px solid rgba(168, 85, 247, 0.3)';
+    pulse.style.borderRadius = '50%';
+    pulse.style.transform = 'translate(-50%, -50%)';
+    pulse.style.animation = 'preloaderPulse 2s ease-out forwards';
+    
+    // Add keyframes if not already added
+    if (!document.querySelector('#preloader-pulse-keyframes')) {
+      const style = document.createElement('style');
+      style.id = 'preloader-pulse-keyframes';
+      style.textContent = `
+        @keyframes preloaderPulse {
+          0% {
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0.8;
+          }
+          100% {
+            transform: translate(-50%, -50%) scale(3);
+            opacity: 0;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+    
+    this.preloaderContainer.appendChild(pulse);
+    
+    setTimeout(() => {
+      if (pulse.parentNode) {
+        pulse.remove();
+      }
+    }, 2000);
+  }
+}
+
+// Initialize preloader background when DOM loads
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Initializing preloader minimal background...');
+  
+  try {
+    const preloaderBg = new PreloaderMinimalBackground();
+    
+    // Create loading pulse every few seconds
+    const pulseInterval = setInterval(() => {
+      if (document.getElementById('sujit_main_loader_container')) {
+        preloaderBg.createLoadingPulse();
+      } else {
+        clearInterval(pulseInterval);
+      }
+    }, 4000);
+    
+    // Intensify effects when progress reaches certain points
+    const progressBar = document.getElementById('sujit_progress_bar_fill');
+    if (progressBar) {
+      const observer = new MutationObserver(() => {
+        const width = parseFloat(progressBar.style.width);
+        if (width > 50 && width < 52) {
+          preloaderBg.intensifyEffects();
+        }
+      });
+      
+      observer.observe(progressBar, { 
+        attributes: true, 
+        attributeFilter: ['style'] 
+      });
+    }
+    
+    console.log('Preloader minimal background loaded successfully!');
+  } catch (error) {
+    console.error('Error loading preloader minimal background:', error);
+  }
+});
