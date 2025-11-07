@@ -182,7 +182,7 @@ document.addEventListener('sujitLoaderComplete', function () {
  });
 
  // Typing animation effect
- const words = ["Welcome to my page", "Laravel developer", "Full-Stack Web developer", "Ui/Ux designer"];
+ const words = ["Welcome to my page", "PHP developer","Laravel developer", "Web developer", "Ui/Ux designer"];
  let currentWordIndex = 0;
  let currentCharIndex = 0;
  let isDeleting = false;

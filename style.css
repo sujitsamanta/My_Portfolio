@@ -1,9 +1,13 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400&display=swap');
+
 html {
   scrollbar-width: none;
 }
 
 body {
   background: #1a0b2e;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* Pree loder */
@@ -905,4 +909,651 @@ ader Minimal Background Integration */
   .preloader-scanlines {
     opacity: 0.1 !important;
   }
+}/* Typograph
+y System with Cormorant Garamond */
+
+/* Base Typography - Cormorant Garamond for all text */
+* {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Headings - Enhanced Cormorant Garamond */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+/* Large Text Elements */
+.text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 500;
+}
+
+/* Navigation */
+nav, nav a, .nav-link, .mobile-nav-link {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}
+
+/* Buttons and Interactive Elements */
+button, .btn, .magnetic-element, a {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}
+
+/* Body Text and Paragraphs */
+p, span, div, li {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Small Text - Montserrat for better readability */
+.text-sm, .text-xs, 
+input, textarea, label,
+.form-input,
+.badge, .tag,
+.caption, .meta {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Code Elements - Monospace */
+code, pre, .font-mono,
+.sujit_code_colors,
+.sujit_typing_animation_loader,
+#sujit_typing_text_element {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace !important;
+  font-weight: 400;
+}
+
+/* Preloader Typography */
+#sujit_main_loader_container * {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+#sujit_main_loader_container h1 {
+  font-weight: 500 !important;
+}
+
+#sujit_main_loader_container .font-mono,
+#sujit_main_loader_container .sujit_code_colors {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Hero Section */
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.typing-animation {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 500 !important;
+}
+
+/* Project Cards */
+.project-card h3 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 500 !important;
+}
+
+.project-card p {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400 !important;
+}
+
+/* Timeline and Experience Cards */
+.timeline-item h4,
+.experience-card h3 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 500 !important;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300 !important;
+}
+
+.contact-form label {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400 !important;
+}
+
+/* Footer */
+footer h4 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 500 !important;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .text-4xl, .text-5xl, .text-6xl {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Font Loading Optimization */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+}/
+* Small Text - Montserrat Font Family */
+
+/* Small text classes */
+.text-xs, .text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+/* Small descriptive text */
+p.text-sm, span.text-sm, div.text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Form elements - small text */
+input, textarea, select, label {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Small UI elements */
+.badge, .tag, .chip {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+/* Project card small text */
+.project-card .text-xs,
+.project-card .text-sm,
+.project-card span[class*="bg-"],
+.project-card .badge {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Timeline small text */
+.timeline-item .text-sm,
+.timeline-item .text-xs,
+.timeline-item p.text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Experience card small text */
+.experience-card .text-sm,
+.experience-card .text-xs,
+.experience-card span.text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Stats and counters - small text */
+.stats-card .text-xs,
+.text-xs.text-text-gray {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Navigation small elements */
+.mobile-menu .text-sm,
+nav .text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Footer small text */
+footer .text-sm,
+footer .text-xs,
+footer p:not(h1):not(h2):not(h3):not(h4) {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Contact form small text */
+.contact-form .text-sm,
+.contact-form label,
+.form-input::placeholder {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Skill bars and progress text */
+.skill-bar + span,
+.progress-text,
+#sujit_percentage_text {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Technology tags and badges */
+.bg-purple-600.bg-opacity-30,
+.bg-indigo-600.bg-opacity-30,
+.bg-blue-600.bg-opacity-30,
+.bg-red-600.bg-opacity-30,
+.bg-green-600.bg-opacity-30,
+.bg-yellow-600.bg-opacity-30,
+span[class*="bg-"][class*="opacity-30"] {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+/* Preloader small text */
+#sujit_main_loader_container .text-sm,
+#sujit_main_loader_container .sujit_gray_text,
+.sujit_gray_text {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Hero section small text */
+.hero-content p.text-sm,
+.hero-content .text-text-gray,
+.text-text-gray {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* About section small text */
+#about p.text-sm,
+#about .text-sm,
+#about .text-gray-300 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Projects section small text */
+#projects p.text-sm,
+#projects .text-sm,
+.project-card p.text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Contact section small text */
+#contact p.text-sm,
+#contact .text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Tab content small text */
+.tab-content .text-sm,
+.experience-card ul li {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Button small text */
+button .text-sm,
+.btn .text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Meta information */
+.meta, .caption, .description {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+/* Tooltip and context text */
+.context-tooltip,
+.cursor-text,
+.tooltip {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+/* Social links small text */
+.social-links .text-sm,
+a[href*="github"] .text-sm,
+a[href*="linkedin"] .text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Responsive small text */
+@media (max-width: 768px) {
+  .text-sm {
+    font-size: 0.8rem !important;
+  }
+  
+  .text-xs {
+    font-size: 0.7rem !important;
+  }
+  
+  .badge, .tag {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* Specific Tailwind classes for small text */
+.text-gray-300,
+.text-gray-400,
+.text-gray-500,
+.text-purple-300,
+.text-purple-400,
+.text-white.text-sm,
+.text-text-gray {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* List items small text */
+ul li.text-sm,
+ol li.text-sm,
+li .text-sm {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}/* Preloa
+der Code Snippets - Montserrat Font */
+
+/* Code block container */
+.sujit_code_block_style {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* All code colors and text within code block */
+.sujit_code_colors,
+.sujit_code_colors * {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Specific code elements */
+.sujit_gray_comment {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+.sujit_purple_keyword {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+.sujit_white_text {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+.sujit_pink_property {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+.sujit_yellow_string {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Override any monospace font in preloader */
+#sujit_main_loader_container .font-mono,
+#sujit_main_loader_container .text-sm.font-mono,
+#sujit_main_loader_container .sujit_code_colors.font-mono {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Ensure all text within code block uses Montserrat */
+.sujit_code_block_style .text-left,
+.sujit_code_block_style .text-sm,
+.sujit_code_block_style div {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Specific targeting for the code content */
+.sujit_slide_up_animation .sujit_code_block_style,
+.sujit_slide_up_animation .sujit_code_block_style * {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Make sure nested spans also use Montserrat */
+.sujit_code_colors span,
+.sujit_purple_keyword span,
+.sujit_pink_property span {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Additional specificity for the exact structure */
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .text-left.font-mono.text-sm.sujit_code_colors,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .text-left.font-mono.text-sm.sujit_code_colors * {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Override any inherited monospace */
+.sujit_code_block_style {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.sujit_code_block_style * {
+  font-family: inherit !important;
+}/* Over
+ride Preloader Code Snippets - Cormorant Garamond Font */
+
+/* Code block container - Override all previous rules */
+.sujit_code_block_style {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* All code colors and text within code block */
+.sujit_code_colors,
+.sujit_code_colors *,
+.sujit_code_colors div,
+.sujit_code_colors span {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}
+
+/* Specific code elements */
+.sujit_gray_comment {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 300;
+}
+
+.sujit_purple_keyword {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}
+
+.sujit_white_text {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}
+
+.sujit_pink_property {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}
+
+.sujit_yellow_string {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 300;
+}
+
+/* Override any monospace font in preloader */
+#sujit_main_loader_container .font-mono,
+#sujit_main_loader_container .text-sm.font-mono,
+#sujit_main_loader_container .sujit_code_colors.font-mono,
+#sujit_main_loader_container .sujit_code_colors {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}
+
+/* Ensure all text within code block uses Cormorant Garamond */
+.sujit_code_block_style .text-left,
+.sujit_code_block_style .text-sm,
+.sujit_code_block_style div,
+.sujit_code_block_style span {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* Specific targeting for the code content */
+.sujit_slide_up_animation .sujit_code_block_style,
+.sujit_slide_up_animation .sujit_code_block_style *,
+.sujit_slide_up_animation .sujit_code_block_style div,
+.sujit_slide_up_animation .sujit_code_block_style span {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* Make sure nested spans also use Cormorant Garamond */
+.sujit_code_colors span,
+.sujit_purple_keyword span,
+.sujit_pink_property span,
+.sujit_white_text,
+.sujit_yellow_string {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* Additional specificity for the exact structure */
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .text-left.font-mono.text-sm.sujit_code_colors,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .text-left.font-mono.text-sm.sujit_code_colors *,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .text-left.font-mono.text-sm.sujit_code_colors div,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .text-left.font-mono.text-sm.sujit_code_colors span {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}
+
+/* Override any inherited fonts with maximum specificity */
+#sujit_main_loader_container .sujit_code_block_style,
+#sujit_main_loader_container .sujit_code_block_style *,
+#sujit_main_loader_container .sujit_code_block_style div,
+#sujit_main_loader_container .sujit_code_block_style span {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* Floating code elements */
+.sujit_floating_code_purple,
+.sujit_floating_code_pink,
+.sujit_floating_code_violet {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 400;
+}/* Fina
+l Override - Preloader Code Snippets to Montserrat Font */
+
+/* Code block container - Final override */
+.sujit_code_block_style {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* All code colors and text within code block */
+.sujit_code_colors,
+.sujit_code_colors *,
+.sujit_code_colors div,
+.sujit_code_colors span {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Specific code elements with Montserrat */
+.sujit_gray_comment {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+.sujit_purple_keyword {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 500;
+}
+
+.sujit_white_text {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+.sujit_pink_property {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+.sujit_yellow_string {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+/* Override any other font in preloader code */
+#sujit_main_loader_container .font-mono,
+#sujit_main_loader_container .text-sm.font-mono,
+#sujit_main_loader_container .sujit_code_colors.font-mono,
+#sujit_main_loader_container .sujit_code_colors,
+#sujit_main_loader_container .sujit_code_block_style {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Ensure all text within code block uses Montserrat */
+.sujit_code_block_style .text-left,
+.sujit_code_block_style .text-sm,
+.sujit_code_block_style div,
+.sujit_code_block_style span,
+.sujit_code_block_style .font-mono {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Specific targeting for the exact code content structure */
+.mt-8.sujit_slide_up_animation .sujit_code_block_style,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style *,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style div,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style span,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .text-left,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .font-mono,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .text-sm,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style .sujit_code_colors {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Make sure all nested elements use Montserrat */
+.sujit_code_colors span,
+.sujit_purple_keyword span,
+.sujit_pink_property span,
+.sujit_white_text,
+.sujit_yellow_string,
+.sujit_gray_comment {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Maximum specificity override for the exact HTML structure */
+.mt-8.sujit_slide_up_animation .sujit_code_block_style.rounded-lg.p-4.max-w-md.mx-auto .text-left.font-mono.text-sm.sujit_code_colors,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style.rounded-lg.p-4.max-w-md.mx-auto .text-left.font-mono.text-sm.sujit_code_colors *,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style.rounded-lg.p-4.max-w-md.mx-auto .text-left.font-mono.text-sm.sujit_code_colors div,
+.mt-8.sujit_slide_up_animation .sujit_code_block_style.rounded-lg.p-4.max-w-md.mx-auto .text-left.font-mono.text-sm.sujit_code_colors span {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Floating code elements also use Montserrat */
+.sujit_floating_code_purple,
+.sujit_floating_code_pink,
+.sujit_floating_code_violet {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
 }
