@@ -1,0 +1,129 @@
+/* Simple Mouse Animation Effects */
+
+/* Custom Cursor */
+.simple-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a855f7;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.simple-cursor.active {
+  opacity: 1;
+}
+
+/* Cursor Dot */
+.simple-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #a855f7;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.1s ease;
+  opacity: 0;
+}
+
+.simple-dot.active {
+  opacity: 1;
+}
+
+/* Cursor Trail */
+.simple-trail {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  background: rgba(168, 85, 247, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+/* Hover Effects */
+.simple-cursor.hover {
+  transform: scale(1.5);
+  border-color: #ec4899;
+}
+
+.simple-dot.hover {
+  transform: scale(1.5);
+  background: #ec4899;
+}
+
+/* Click Effect */
+.click-ripple {
+  position: fixed;
+  border: 2px solid #a855f7;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  from {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+  }
+  to {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+
+/* Smooth Glow */
+.simple-glow {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9996;
+  filter: blur(20px);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.simple-glow.active {
+  opacity: 1;
+}
+
+/* Hover state for interactive elements */
+a:hover,
+button:hover,
+.project-card:hover {
+  cursor: none;
+}
+
+/* Hide on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .simple-cursor,
+  .simple-dot,
+  .simple-trail,
+  .simple-glow,
+  .click-ripple {
+    display: none !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .simple-cursor,
+  .simple-dot,
+  .simple-trail,
+  .simple-glow {
+    transition: none !important;
+    animation: none !important;
+  }
+}
